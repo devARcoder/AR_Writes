@@ -1,10 +1,14 @@
 import React from 'react'
-import Header from './layout/Header'
+import Headers from './layout/Headers'
+import Hero from './components/home/Hero'
+// import MediumForYou from './components/MediumForYou'
 
 const App = () => {
   return (
     <>
-      <Header/>
+    <Headers/>
+    {/* <MediumForYou/> */}
+    <Hero/>
     </>
   )
 }
