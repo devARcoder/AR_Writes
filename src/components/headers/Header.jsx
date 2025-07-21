@@ -1,51 +1,83 @@
-import { Bell, Menu, Search, SquarePen } from 'lucide-react'
+import { Bell, Menu, Search, SquarePen, X } from 'lucide-react'
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import Input from '../shared/common/Input'
 import SearchBar from './SearchBar';
+import Sidebar from './Sidebar';
+import Button from '../shared/common/Button';
+import Navbar from './Navbar';
 
 const Header = () => {
-    const [isSearchOpen, setIsSearchOpen ] = useState(false);
-    const [isSidebarOpen, setIsSidebarOpen] = useState(false)
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+    const [isLogged, setIsLogged] = useState(false); // Manage user login state
+    const navigate = useNavigate();
 
-    const toggleSearchBar = () => {
-        setIsSearchOpen(prev => !prev)
-    }
-    const toggleSidebar = () => {
-        setIsSidebarOpen(prev => !prev)
-    }
+    const toggleSidebar = () => setIsSidebarOpen(prev => !prev);
+    const closeSidebar = () => setIsSidebarOpen(false);
+
+    // When Write is clicked
+    const handleWriteClick = () => {
+        if (!isLogged) {
+            navigate('/accounts'); // Redirect to accounts if not logged in
+        } else {
+            console.log('Open Write Editor');
+        }
+    };
 
 
-  return (
-    <>
-      <div className="flex justify-between items-center px-5 sm:px-7 md:px-8 py-3 border-none bg-[#222]">
-        <div className="menu">
-          <Menu onClick={toggleSidebar} size={26} className='text-white cursor-pointer'  />
-        </div>
-        <div className="side1  ">
-            <h1 className='text-white text-3xl font-bold'>ARwrite</h1>
-            {/* <div className="hidden sm:inline-block relative flex items-center">
-                <Search strokeWidth={1} size={23} className='absolute  left-4 top-2 text-white'/>
-                <Input placeholder="Search" type="text" className="border border-gray-400 text-gray-100 focus:outline-none bg-[#222] focus:shadow-md shadow-gray-400  rounded-full pl-13 pr-3 py-2 inset-shadow-sm focus:inset-shadow-gray-400" />
-            </div> */}
-        </div>
+    return (
+        <>
+            <div className="flex justify-between items-center px-5 sm:px-7 md:px-8 py-3 bg-[#222]">
+                {/* Sidebar Toggle for Mobile */}
+                <div className="menu shadow-[inset_0_-12px_9px_rgba(0,0,0,0.8)] px-1 py-1 rounded-md lg:hidden">
+                    <Menu onClick={toggleSidebar} size={26} className="text-white cursor-pointer " />
+                </div>
 
-        <div className="side2 flex items-center space-x-3">
-            <div className="writes hidden md:flex items-center space-x-1">
-                <SquarePen strokeWidth={1} className='text-white' size={24}/>
-                <p className='text-white'>write</p>
+                {/* Logo */}
+                <div className="side1">
+                    <h1 className="text-white text-3xl font-bold">ARwrite</h1>
+                </div>
+
+                {/* Navbar for Desktop */}
+                <div className="hidden lg:inline-block">
+                  <Navbar />
+                </div>
+
+                {/* Right Side: Profile or Write Button */}
+                <div className="side2 flex items-center space-x-3">
+                    {isLogged ? (
+                        <div className="profile bg-gray-200 rounded-full p-4"></div>
+                    ) : (
+                        <Button name="Get Started" onClick={handleWriteClick} />
+                    )}
+
+                    
+                </div>
             </div>
-            <Search onClick={toggleSearchBar} className='hidden sm:text-white' size={24}/>
-            <Bell strokeWidth={1} className='hidden text-white' size={24}/>
 
-            <div className="profile bg-gray-200 rounded-full p-4">
-                
+            {/* Sidebar Overlay (click outside to close) */}
+            {isSidebarOpen && (
+                <div className="fixed inset-0 z-40" onClick={closeSidebar} />
+            )}
+
+            {/* Sidebar */}
+            <div
+                className={`fixed top-0 left-0 h-full w-full bg-[#222] shadow-lg transform transition-transform duration-300 ease-in-out z-50
+                ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'}`}
+                onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside
+            >
+                {/* Sidebar Header */}
+                <div className="flex justify-between items-center px-5 py-3">
+                    <h1 className="text-white text-3xl font-bold">ARwrite</h1>
+                    <div className="shadow-[inset_0_-12px_9px_rgba(0,0,0,0.8)] px-1 py-1 rounded-md">
+                        <X className="text-white cursor-pointer" size={28} onClick={closeSidebar} />
+                    </div>
+                </div>
+
+                <Sidebar />
             </div>
-        </div>
-      </div>
-
-      {isSearchOpen && <SearchBar/>}
-    </>
-  )
+        </>
+    )
 }
 
-export default Header
+export default Header;
