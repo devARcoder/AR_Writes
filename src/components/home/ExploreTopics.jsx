@@ -138,13 +138,13 @@ const ExploreTopics = () => {
           </div>
         ) : news.length > 0 ? (
           <>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="">
               {news.map((article, index) => (
                 <NewsCard
                   key={index}
                   article={{
                     ...article,
-                    title: highlightText(article.title || "", searchInput),
+                    title: (article.title || "", searchInput),
                     description: highlightText(article.description || "", searchInput),
                   }}
                 />
@@ -161,7 +161,7 @@ const ExploreTopics = () => {
               </div>
             )}
             {loading && page > 1 && (
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+              <div className="">
                 {Array.from({ length: PAGE_SIZE }).map((_, i) => (
                   <NewsCardSkeleton key={i} />
                 ))}
