@@ -29,13 +29,14 @@ const Header = () => {
         <>
             <div className="flex justify-between items-center px-5 sm:px-7 md:px-8 py-3 bg-[#222]">
                 {/* Sidebar Toggle for Mobile */}
-                <div className="menu shadow-[inset_0_-12px_9px_rgba(0,0,0,0.8)] px-1 py-1 rounded-md lg:hidden">
-                    <Menu onClick={toggleSidebar} size={26} className="text-white cursor-pointer " />
+                <div className="menu shadow-[inset_0_-12px_9px_rgba(0,0,0,0.8)] px-2 py-2 rounded-md lg:hidden">
+                    <Menu onClick={toggleSidebar} size={28} className="text-white cursor-pointer " />
                 </div>
 
                 {/* Logo */}
-                <div className="side1">
-                    <h1 className="text-white text-3xl font-bold">ARwrite</h1>
+                <div className="side1 shadow-[inset_0_-12px_9px_rgba(0,0,0,0.8)] px-1 py-1 rounded-full">
+                    <img className='w-20 h-20 object-fit' src="/images/arb.png" alt="" />
+                    
                 </div>
 
                 {/* Navbar for Desktop */}
@@ -46,9 +47,11 @@ const Header = () => {
                 {/* Right Side: Profile or Write Button */}
                 <div className="side2 flex items-center space-x-3">
                     {isLogged ? (
-                        <div className="profile bg-gray-200 rounded-full p-4"></div>
+                        <div className="profile bg-gray-200 rounded-full p-4 md:p-6"></div>
                     ) : (
-                        <Button name="Get Started" onClick={handleWriteClick} />
+                        <div className="shadow-[inset_0_-12px_9px_rgba(0,0,0,0.6)] hover:shadow-[inset_0_-12px_9px_rgba(0,0,0,0.8)] px-2 py-2 rounded-md" onClick={handleWriteClick}>
+                            <SquarePen size={28} className='text-white'/>
+                        </div>
                     )}
 
                     
@@ -68,8 +71,11 @@ const Header = () => {
             >
                 {/* Sidebar Header */}
                 <div className="flex justify-between items-center px-5 py-3">
-                    <h1 className="text-white text-3xl font-bold">ARwrite</h1>
-                    <div className="shadow-[inset_0_-12px_9px_rgba(0,0,0,0.8)] px-1 py-1 rounded-md">
+                    <div className="side1 shadow-[inset_0_-12px_9px_rgba(0,0,0,0.8)] px-1 py-1 rounded-full">
+                    <img className='w-20 h-20 object-fit' src="/images/arb.png" alt="" />
+                    
+                </div>
+                    <div className="shadow-[inset_0_-12px_9px_rgba(0,0,0,0.8)] px-2 py-2 rounded-md">
                         <X className="text-white cursor-pointer" size={28} onClick={closeSidebar} />
                     </div>
                 </div>
