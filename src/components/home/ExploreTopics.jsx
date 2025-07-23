@@ -11,7 +11,7 @@ const PAGE_SIZE = 6;
 
 const ExploreTopics = () => {
   const navigate = useNavigate();
-  const { categoryName } = useParams(); // Read category from URL
+  const { categoryName } = useParams(); 
   const [selectedCategory, setSelectedCategory] = useState(categoryName || "General");
 
   const [news, setNews] = useState([]);
