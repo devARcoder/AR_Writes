@@ -8,6 +8,7 @@ const NewsCardSkeleton = () => {
       <div className="mt-3 h-5 bg-gray-300 rounded w-3/4"></div>
       <div className="mt-2 h-4 bg-gray-300 rounded w-full"></div>
       <div className="mt-2 h-4 bg-gray-300 rounded w-2/3"></div>
+      <div className="mt-2 h-9 bg-gray-300 rounded w-28"></div>
     </div>
   );
 };
