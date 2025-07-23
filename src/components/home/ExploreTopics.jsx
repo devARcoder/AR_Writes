@@ -104,7 +104,7 @@ const ExploreTopics = () => {
         )}
       </div>
 
-      {/* Topics */}
+      
       <div className="flex flex-wrap px-3 lg:px-44 space-x-3 items-center justify-center">
         {exploreTopicsData.map((item) => {
           const Icon = item.icon;
@@ -128,7 +128,7 @@ const ExploreTopics = () => {
         })}
       </div>
 
-      {/* News */}
+      
       <div className="mt-8 px-3 lg:px-44">
         {loading && page === 1 ? (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
