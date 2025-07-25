@@ -10,16 +10,20 @@ const navigationLink = [
 const Sidebar = () => {
   return (
     <>
-      <div className="text-white px-5 py-8 space-y-4">
+      <div className="text-white px-5 py-2 space-y-4">
         {navigationLink.map((navigate, i)=> (
-            <ul className="" key={i}>
-                <li className='text-xl font-semibold hover:text-gray-200'>{navigate.name}</li>
+            <ul className="px-4" key={i}>
+                <li className='text-xl font-semibold hover:text-gray-200 py-2'>{navigate.name}</li>
             </ul>
         ))}
 
-        <div className="flex items-center space-x-3 pt-6">
+        <div className="flex items-center pt-6 p-4">
             <Button name="Login" className="" />
-            <Button name="Signup" className="" />
+            <Button name="Signup" className="mx-3" />
+        </div>
+
+        <div className="social">
+
         </div>
       </div>
     </>
