@@ -1,9 +1,10 @@
+import { Facebook, Instagram, Linkedin, LocateFixed, MapPin, Twitter } from 'lucide-react'
 import React from 'react'
 
 const AboutAuthor = () => {
   return (
     <>
-      <div className="bg-[#1c1c1c] w-[44%] rounded-xl p-8">
+      <div className="sticky top-0 bg-[#1c1c1c] w-[44%] rounded-xl p-8">
         <h1 className='text-gray-400 text-md font-semibold'>About</h1>
 
         <div className="flex items-center space-x-3 pt-4">
@@ -18,12 +19,16 @@ const AboutAuthor = () => {
 
         <p className='pt-4 text-gray-300'>Ali shares thoughtful insights and reflections on life, culture, and personal growth. His work explores the intersections of creativity and experience, offering readers unique perspectives.</p>
 
-        <div className="flex items-center space-x-3">
-            
+        <div className="flex items-center space-x-2 pt-4">
+            <MapPin />
+            <h1>Pakistan, <span>Peshawar</span></h1>
         </div>
 
-        <div className="flex space-x-3 items-center">
-
+        <div className="flex space-x-3 items-center pt-6">
+            <p><Twitter/></p>
+            <p><Facebook/></p>
+            <p><Instagram/></p>
+            <p><Linkedin/></p>
         </div>
       </div>
     </>
