@@ -13,7 +13,18 @@ export const blogData = [
       name: "Sarah Johnson",
       avatar: "https://randomuser.me/api/portraits/women/44.jpg",
       bio: "Tech writer and frontend developer passionate about AI and emerging technologies.",
-      featurePost: "Top 10 AI Tools for Developers",
+      location: { country: "USA", city: "San Francisco" },
+      socialLinks: {
+        twitter: "https://twitter.com/sarah_johnson",
+        linkedin: "https://linkedin.com/in/sarahjohnson",
+        instagram: "https://instagram.com/sarah_codes",
+      },
+      featurePost: {
+        title: "Top 10 AI Tools for Developers",
+        coverImage:
+          "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg",
+        date: "2025-07-01",
+      },
       workExperience: [
         {
           company: "Tech Solutions Inc.",
@@ -50,7 +61,18 @@ export const blogData = [
       name: "Ali Raza",
       avatar: "https://randomuser.me/api/portraits/men/31.jpg",
       bio: "Tech journalist focusing on South Asian startup ecosystems.",
-      featurePost: "Pakistan’s Startup Revolution",
+      location: { country: "Pakistan", city: "Lahore" },
+      socialLinks: {
+        twitter: "https://twitter.com/ali_raza",
+        linkedin: "https://linkedin.com/in/aliraza",
+        instagram: "https://instagram.com/aliwrites",
+      },
+      featurePost: {
+        title: "Pakistan’s Startup Revolution",
+        coverImage:
+          "https://images.pexels.com/photos/3183198/pexels-photo-3183198.jpeg",
+        date: "2025-07-05",
+      },
       workExperience: [
         { company: "Startup Today", role: "Journalist", years: "2020-2023" },
         { company: "Tech Asia", role: "Senior Writer", years: "2023-Present" },
@@ -79,7 +101,18 @@ export const blogData = [
       name: "Fatima Khan",
       avatar: "https://randomuser.me/api/portraits/women/66.jpg",
       bio: "Food blogger exploring hidden gems in South Asia.",
-      featurePost: "Karachi's Best Street Food Spots",
+      location: { country: "Pakistan", city: "Karachi" },
+      socialLinks: {
+        twitter: "https://twitter.com/fatimakhan",
+        linkedin: "https://linkedin.com/in/fatimakhan",
+        instagram: "https://instagram.com/fatimablogs",
+      },
+      featurePost: {
+        title: "Karachi's Best Street Food Spots",
+        coverImage:
+          "https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg",
+        date: "2025-07-07",
+      },
       workExperience: [
         { company: "Foodie Blogs", role: "Writer", years: "2020-2022" },
         {
@@ -112,7 +145,18 @@ export const blogData = [
       name: "Hassan Al Mansoori",
       avatar: "https://randomuser.me/api/portraits/men/72.jpg",
       bio: "Middle East culture and business analyst.",
-      featurePost: "UAE’s Economic Growth in 2025",
+      location: { country: "UAE", city: "Dubai" },
+      socialLinks: {
+        twitter: "https://twitter.com/hassan_mansoori",
+        linkedin: "https://linkedin.com/in/hassanalmansoori",
+        instagram: "https://instagram.com/hassanwrites",
+      },
+      featurePost: {
+        title: "UAE’s Economic Growth in 2025",
+        coverImage:
+          "https://images.pexels.com/photos/273661/pexels-photo-273661.jpeg",
+        date: "2025-07-09",
+      },
       workExperience: [
         {
           company: "Dubai Times",
@@ -149,7 +193,18 @@ export const blogData = [
       name: "Ravi Sharma",
       avatar: "https://randomuser.me/api/portraits/men/40.jpg",
       bio: "Tech entrepreneur and AI enthusiast from Bangalore.",
-      featurePost: "AI Startups to Watch",
+      location: { country: "India", city: "Bangalore" },
+      socialLinks: {
+        twitter: "https://twitter.com/ravi_sharma",
+        linkedin: "https://linkedin.com/in/ravisharma",
+        instagram: "https://instagram.com/ravi.ai",
+      },
+      featurePost: {
+        title: "AI Startups to Watch",
+        coverImage:
+          "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg",
+        date: "2025-07-10",
+      },
       workExperience: [
         { company: "AI Nexus", role: "Co-Founder", years: "2020-2023" },
         { company: "Bangalore AI Hub", role: "Advisor", years: "2023-Present" },
@@ -178,7 +233,18 @@ export const blogData = [
       name: "Aisha Al-Kuwari",
       avatar: "https://randomuser.me/api/portraits/women/53.jpg",
       bio: "Lifestyle blogger covering Qatar, UAE, and GCC trends.",
-      featurePost: "Top 5 Spots to Visit in Qatar",
+      location: { country: "Qatar", city: "Doha" },
+      socialLinks: {
+        twitter: "https://twitter.com/aisha_kuwari",
+        linkedin: "https://linkedin.com/in/aishalkuwari",
+        instagram: "https://instagram.com/aishalifestyle",
+      },
+      featurePost: {
+        title: "Top 5 Spots to Visit in Qatar",
+        coverImage:
+          "https://images.pexels.com/photos/248837/pexels-photo-248837.jpeg",
+        date: "2025-07-11",
+      },
       workExperience: [
         {
           company: "Qatar Lifestyle",
@@ -215,7 +281,18 @@ export const blogData = [
       name: "Arjun Verma",
       avatar: "https://randomuser.me/api/portraits/men/19.jpg",
       bio: "Travel influencer exploring Asia’s most exotic destinations.",
-      featurePost: "Luxury Escapes in Asia",
+      location: { country: "India", city: "Delhi" },
+      socialLinks: {
+        twitter: "https://twitter.com/arjunverma",
+        linkedin: "https://linkedin.com/in/arjunverma",
+        instagram: "https://instagram.com/arjuntravels",
+      },
+      featurePost: {
+        title: "Luxury Escapes in Asia",
+        coverImage:
+          "https://images.pexels.com/photos/753626/pexels-photo-753626.jpeg",
+        date: "2025-07-13",
+      },
       workExperience: [
         { company: "Travel Asia", role: "Travel Writer", years: "2019-2023" },
         {
@@ -248,7 +325,18 @@ export const blogData = [
       name: "Mariam Saleh",
       avatar: "https://randomuser.me/api/portraits/women/59.jpg",
       bio: "Business and finance blogger focused on UAE's digital economy.",
-      featurePost: "Freelancing Opportunities in UAE",
+      location: { country: "UAE", city: "Dubai" },
+      socialLinks: {
+        twitter: "https://twitter.com/mariam_saleh",
+        linkedin: "https://linkedin.com/in/mariamsaleh",
+        instagram: "https://instagram.com/mariamblogs",
+      },
+      featurePost: {
+        title: "Freelancing Opportunities in UAE",
+        coverImage:
+          "https://images.pexels.com/photos/3184301/pexels-photo-3184301.jpeg",
+        date: "2025-07-14",
+      },
       workExperience: [
         {
           company: "UAE Finance Weekly",
@@ -285,7 +373,18 @@ export const blogData = [
       name: "Imran Siddiqui",
       avatar: "https://randomuser.me/api/portraits/men/23.jpg",
       bio: "Fintech analyst and digital payments consultant.",
-      featurePost: "Top 5 Fintech Trends in 2025",
+      location: { country: "Pakistan", city: "Islamabad" },
+      socialLinks: {
+        twitter: "https://twitter.com/imran_siddiqui",
+        linkedin: "https://linkedin.com/in/imransiddiqui",
+        instagram: "https://instagram.com/fintechimran",
+      },
+      featurePost: {
+        title: "Top 5 Fintech Trends in 2025",
+        coverImage:
+          "https://images.pexels.com/photos/210607/pexels-photo-210607.jpeg",
+        date: "2025-07-15",
+      },
       workExperience: [
         { company: "Fintech Hub PK", role: "Analyst", years: "2018-2022" },
         {

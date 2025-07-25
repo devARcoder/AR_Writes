@@ -3,6 +3,7 @@ import { exploreTopicsData } from '../../data/data'
 import { Search } from 'lucide-react'
 import Input from '../shared/common/Input'
 import BlogCard from '../Blogs/BlogCard'
+import Blogs from '../Blogs/Blogs'
 const ExploreTopics = () => {
   return (
     <>
@@ -41,7 +42,7 @@ const ExploreTopics = () => {
         })}
       </div>
 
-      <BlogCard/>
+      <Blogs/>
     </div> 
     </>
   )
