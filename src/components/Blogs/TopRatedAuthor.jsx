@@ -1,10 +1,11 @@
 import { Facebook, Instagram, Linkedin, LocateFixed, MapPin, Twitter } from 'lucide-react'
 import React from 'react'
 
-const AboutAuthor = () => {
+const TopRatedAuthor = () => {
   return (
     <>
-      <div className="sticky top-0 bg-[#1c1c1c] w-[44%] rounded-xl p-8">
+      <div className="lg:sticky lg:top-0 bg-[#1c1c1c] w-full rounded-xl p-8 inset-shadow-sm w-full  inset-shadow-gray-400 
+  shadow-[inset_0_-20px_5px_rgba(0,0,0,0.6)] shadow-gray-400 shadow-sm">
         <h1 className='text-gray-400 text-md font-semibold'>About</h1>
 
         <div className="flex items-center space-x-3 pt-4">
@@ -35,4 +36,4 @@ const AboutAuthor = () => {
   )
 }
 
-export default AboutAuthor
+export default TopRatedAuthor

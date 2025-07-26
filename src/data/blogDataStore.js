@@ -2,10 +2,10 @@ export const blogData = [
   {
     id: 1,
     title: "The Future of Web Development: Trends to Watch in 2025",
-    slug: "future-of-web-development-2025",
+    slug: "future-of-web-dev-2025",
     excerpt:
       "Web development is evolving faster than ever. Here are the top trends shaping the industry in 2025.",
-    content: `<p>Web development is entering a new era with AI-driven tools, serverless architecture, and Web3 technologies...</p>`,
+    content: `Web development is entering a new era with AI-driven tools, serverless architecture, and Web3 technologies...`,
     coverImage:
       "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg",
     author: {
@@ -53,7 +53,7 @@ export const blogData = [
     slug: "pakistan-startups-2025",
     excerpt:
       "Pakistan's tech scene is booming. These are the startups to watch this year.",
-    content: `<p>From fintech to e-commerce, Pakistani startups are making waves globally...</p>`,
+    content: `From fintech to e-commerce, Pakistani startups are making waves globally...`,
     coverImage:
       "https://images.pexels.com/photos/3182781/pexels-photo-3182781.jpeg",
     author: {
@@ -93,7 +93,7 @@ export const blogData = [
     slug: "karachi-street-food",
     excerpt:
       "Karachi is home to some of the most vibrant street food scenes in Asia.",
-    content: `<p>From bun kebabs to gola ganda, here are the must-try foods...</p>`,
+    content: `From bun kebabs to gola ganda, here are the must-try foods...`,
     coverImage:
       "https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg",
     author: {
@@ -137,7 +137,7 @@ export const blogData = [
     slug: "dubai-expo-2025",
     excerpt:
       "Dubai Expo 2025 is set to showcase futuristic innovations and cultural diversity.",
-    content: `<p>Dubai continues to position itself as a global innovation hub...</p>`,
+    content: `Dubai continues to position itself as a global innovation hub...`,
     coverImage:
       "https://images.pexels.com/photos/169647/pexels-photo-169647.jpeg",
     author: {
@@ -185,7 +185,7 @@ export const blogData = [
     slug: "top-ai-companies-india-2025",
     excerpt:
       "India is becoming a hub for AI innovation. Here are the companies leading the way.",
-    content: `<p>AI startups and enterprises are driving digital transformation in India...</p>`,
+    content: `AI startups and enterprises are driving digital transformation in India...`,
     coverImage:
       "https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg",
     author: {
@@ -225,7 +225,7 @@ export const blogData = [
     slug: "exploring-doha",
     excerpt:
       "Doha blends rich traditions with modern luxury. Here's what you should know.",
-    content: `<p>From Souq Waqif to futuristic skyscrapers, Doha is a must-visit...</p>`,
+    content: `From Souq Waqif to futuristic skyscrapers, Doha is a must-visit...`,
     coverImage:
       "https://images.pexels.com/photos/1576939/pexels-photo-1576939.jpeg",
     author: {
@@ -273,7 +273,7 @@ export const blogData = [
     slug: "best-resorts-maldives-2025",
     excerpt:
       "Maldives offers luxury like no other destination. Here’s our top resort picks.",
-    content: `<p>Crystal-clear waters and overwater villas make Maldives unforgettable...</p>`,
+    content: `Crystal-clear waters and overwater villas make Maldives unforgettable...`,
     coverImage:
       "https://images.pexels.com/photos/3601424/pexels-photo-3601424.jpeg",
     author: {
@@ -317,7 +317,7 @@ export const blogData = [
     slug: "freelancers-thrive-in-dubai",
     excerpt:
       "Dubai is becoming a hotspot for freelancers with its tax-free policies and digital hubs.",
-    content: `<p>Co-working spaces and gig platforms are boosting freelancing opportunities...</p>`,
+    content: `Co-working spaces and gig platforms are boosting freelancing opportunities...`,
     coverImage:
       "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg",
     author: {
@@ -365,7 +365,7 @@ export const blogData = [
     slug: "fintech-rise-south-asia",
     excerpt:
       "South Asia is seeing rapid fintech adoption, with startups revolutionizing banking.",
-    content: `<p>Pakistan and India are leading in fintech solutions...</p>`,
+    content: `Pakistan and India are leading in fintech solutions...`,
     coverImage:
       "https://images.pexels.com/photos/4968636/pexels-photo-4968636.jpeg",
     author: {
@@ -408,7 +408,7 @@ export const blogData = [
     title: "India’s Space Achievements: Chandrayaan to 2025",
     slug: "indias-space-achievements",
     excerpt: "ISRO continues to make headlines with ambitious space projects.",
-    content: `<p>India's space program is now competing with global giants...</p>`,
+    content: `India's space program is now competing with global giants...`,
     coverImage:
       "https://images.pexels.com/photos/5860475/pexels-photo-5860475.jpeg",
     author: {
@@ -445,7 +445,7 @@ export const blogData = [
     slug: "ai-healthcare-2025",
     excerpt:
       "From diagnostics to personalized treatment, AI is changing the face of healthcare.",
-    content: `<p>Artificial intelligence is being integrated into healthcare systems worldwide, improving accuracy and patient outcomes...</p>`,
+    content: `Artificial intelligence is being integrated into healthcare systems worldwide, improving accuracy and patient outcomes...`,
     coverImage:
       "https://images.pexels.com/photos/6129233/pexels-photo-6129233.jpeg",
     author: {
@@ -482,7 +482,7 @@ export const blogData = [
     slug: "coworking-lahore-2025",
     excerpt:
       "Lahore's startup scene is thriving with modern co-working spaces.",
-    content: `<p>With flexible workspaces and networking opportunities, Lahore is becoming a hub for remote workers and startups...</p>`,
+    content: `With flexible workspaces and networking opportunities, Lahore is becoming a hub for remote workers and startups...`,
     coverImage:
       "https://images.pexels.com/photos/3184454/pexels-photo-3184454.jpeg",
     author: {
@@ -511,7 +511,7 @@ export const blogData = [
     slug: "hiking-trails-northern-pakistan",
     excerpt:
       "Explore the breathtaking trails of Hunza, Skardu, and Naran in 2025.",
-    content: `<p>Pakistan's northern areas are home to some of the world's most beautiful hiking trails...</p>`,
+    content: `Pakistan's northern areas are home to some of the world's most beautiful hiking trails...`,
     coverImage:
       "https://images.pexels.com/photos/572897/pexels-photo-572897.jpeg",
     author: {
@@ -544,7 +544,7 @@ export const blogData = [
     slug: "ecommerce-trends-2025",
     excerpt:
       "From social commerce to AI-driven personalization, here’s what’s trending in e-commerce.",
-    content: `<p>E-commerce is evolving with new tech like AR shopping, AI recommendations, and rapid delivery systems...</p>`,
+    content: `E-commerce is evolving with new tech like AR shopping, AI recommendations, and rapid delivery systems...`,
     coverImage:
       "https://images.pexels.com/photos/259200/pexels-photo-259200.jpeg",
     author: {
@@ -581,7 +581,7 @@ export const blogData = [
     slug: "top-programming-languages-2025",
     excerpt:
       "Python, Rust, and Go remain key players in 2025’s tech landscape.",
-    content: `<p>Developers are focusing on languages that offer high performance and cross-platform capabilities...</p>`,
+    content: `Developers are focusing on languages that offer high performance and cross-platform capabilities...`,
     coverImage:
       "https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg",
     author: {
@@ -618,7 +618,7 @@ export const blogData = [
     slug: "dubai-startups-2025",
     excerpt:
       "Dubai is attracting global entrepreneurs with its startup-friendly ecosystem.",
-    content: `<p>Dubai is positioning itself as a leader in fintech, AI, and blockchain startups...</p>`,
+    content: `Dubai is positioning itself as a leader in fintech, AI, and blockchain startups...`,
     coverImage:
       "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
     author: {
@@ -651,7 +651,7 @@ export const blogData = [
     slug: "qatar-vision-2030-technology",
     excerpt:
       "Qatar's national vision is driving investment in AI and digital infrastructure.",
-    content: `<p>From smart cities to digital government initiatives, Qatar is making rapid tech progress...</p>`,
+    content: `From smart cities to digital government initiatives, Qatar is making rapid tech progress...`,
     coverImage:
       "https://images.pexels.com/photos/207983/pexels-photo-207983.jpeg",
     author: {
@@ -688,7 +688,7 @@ export const blogData = [
     slug: "india-electric-vehicles-2025",
     excerpt:
       "EV startups and policies are transforming India’s automobile industry.",
-    content: `<p>Electric vehicles are rapidly gaining traction with government support and innovative startups...</p>`,
+    content: `Electric vehicles are rapidly gaining traction with government support and innovative startups...`,
     coverImage:
       "https://images.pexels.com/photos/138666/pexels-photo-138666.jpeg",
     author: {
@@ -721,7 +721,7 @@ export const blogData = [
     slug: "business-strategies-startups-2025",
     excerpt:
       "Growth hacking, AI-driven marketing, and sustainability are key trends.",
-    content: `<p>Startups in 2025 are focusing on data-driven decisions and eco-friendly practices...</p>`,
+    content: `Startups in 2025 are focusing on data-driven decisions and eco-friendly practices...`,
     coverImage:
       "https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg",
     author: {
@@ -758,7 +758,7 @@ export const blogData = [
     slug: "best-coding-bootcamps-asia-2025",
     excerpt:
       "Here’s a roundup of the best bootcamps preparing developers for modern tech jobs.",
-    content: `<p>Bootcamps are offering immersive programs focusing on web development, AI, and cloud computing...</p>`,
+    content: `Bootcamps are offering immersive programs focusing on web development, AI, and cloud computing...`,
     coverImage:
       "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg",
     author: {
