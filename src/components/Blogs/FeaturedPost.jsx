@@ -6,7 +6,7 @@ const FeaturedPost = () => {
 
   return (
 
-    <div className="lg:sticky lg:top-10 rounded-xl shadow-md shadow-gray-700 overflow-hidden">
+    <div className="lg:sticky lg:top-10 rounded-xl overflow-hidden">
       <h1 className="text-gray-400 text-md font-semibold pb-4">Featured Post</h1>
       <div className="img relative">
         {/* Background Image */}
@@ -16,7 +16,7 @@ const FeaturedPost = () => {
         <div className="absolute top-0 left-0 h-full w-full bg-gradient-to-t from-black/80 via-black/40 to-transparent z-10"></div>
 
         {/* Category Tag */}
-        <p className="absolute top-4 left-4 bg-white/20 backdrop-blur-sm px-3 py-0.5 rounded-full font-bold z-20 text-white">
+        <p className="absolute top-4 left-4 mt- bg-white/20 backdrop-blur-sm px-3 py-0.5 rounded-full font-bold z-20 text-white">
           {category}
         </p>
 
@@ -26,8 +26,8 @@ const FeaturedPost = () => {
             {author} on <span>{date}</span>
           </p>
 
-          <h1 className="text-xl font-bold mt-1">{title}</h1>
-          <p className="text-md text-gray-100 mt-2">{excerpt}</p>
+          <h1 className="text-xl font-bold mt-1 line-clamp-2">{title}</h1>
+          <p className="text-sm sm:text-md text-gray-100 mt-2">{excerpt}</p>
         </div>
       </div>
     </div>
