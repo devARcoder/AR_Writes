@@ -1,39 +1,65 @@
-import { Facebook, Instagram, Linkedin, LocateFixed, MapPin, Twitter } from 'lucide-react'
-import React from 'react'
+import {  Github, Globe, Linkedin, MapPin, Twitter } from 'lucide-react';
+import React from 'react';
 
-const TopRatedAuthor = () => {
+const TopRatedAuthor = ({ avatar, name, field, intro, location, socialLinks }) => {
   return (
-    <>
-      <div className="lg:sticky lg:top-0 bg-[#1c1c1c] w-full rounded-xl p-8 inset-shadow-sm w-full  inset-shadow-gray-400 
-  shadow-[inset_0_-20px_5px_rgba(0,0,0,0.6)] shadow-gray-400 shadow-sm">
-        <h1 className='text-gray-400 text-md font-semibold'>About</h1>
+    <div className=" bg-[#1c1c1c] w-full rounded-xl p-8 inset-shadow-sm w-full  inset-shadow-gray-500 lg:mt-6">
+      {/* Heading */}
+      <h1 className="text-gray-400 text-md font-semibold">About Top Rated User</h1>
 
-        <div className="flex items-center space-x-3 pt-4">
-            <div className="img">
-                <img className='rounded-full border-2 border-green-500 w-14 h-14 object-cover' src="https://randomuser.me/api/portraits/men/31.jpg" alt="" />
-            </div>
-            <div className="head">
-                <h1 className='font-bold text-white text-lg'>Ali Raza</h1>
-                <p className='text-gray-300'>Tech journalist</p>
-            </div>
+      {/* Author Info */}
+      <div className="flex items-center space-x-3 pt-4">
+        <div className="img">
+          <img
+            className="rounded-full border-2 border-green-500 w-14 h-14 object-cover"
+            src={avatar}
+            alt={name}
+          />
         </div>
-
-        <p className='pt-4 text-gray-300'>Ali shares thoughtful insights and reflections on life, culture, and personal growth. His work explores the intersections of creativity and experience, offering readers unique perspectives.</p>
-
-        <div className="flex items-center space-x-2 pt-4">
-            <MapPin />
-            <h1>Pakistan, <span>Peshawar</span></h1>
-        </div>
-
-        <div className="flex space-x-3 items-center pt-6">
-            <p><Twitter/></p>
-            <p><Facebook/></p>
-            <p><Instagram/></p>
-            <p><Linkedin/></p>
+        <div className="head">
+          <h1 className="font-bold text-white text-lg">{name}</h1>
+          <p className="text-gray-300 text-sm">{field}</p>
         </div>
       </div>
-    </>
-  )
-}
 
-export default TopRatedAuthor
+      {/* Intro */}
+      <p className="pt-4 text-gray-300 text-md leading-relaxed">{intro}</p>
+
+      {/* Location */}
+      {location && (
+        <div className="flex items-center space-x-2 pt-4 text-gray-300">
+          <MapPin className="w-5 h-5" />
+          <span className="text-sm">
+            {location.country}, {location.city}
+          </span>
+        </div>
+      )}
+
+      {/* Social Links */}
+      <div className="flex space-x-4 items-center pt-6 text-gray-300">
+        {socialLinks.twitter && (
+          <a href={socialLinks.twitter} target="_blank" rel="noreferrer" className="hover:text-green-400 transition-colors duration-300">
+            <Twitter />
+          </a>
+        )}
+        {socialLinks.website && (
+          <a href={socialLinks.facebook} target="_blank" rel="noreferrer" className="hover:text-green-400 transition-colors duration-300">
+            <Globe/>
+          </a>
+        )}
+        {socialLinks.github && (
+          <a href={socialLinks.instagram} target="_blank" rel="noreferrer" className="hover:text-green-400 transition-colors duration-300">
+            <Github/>
+          </a>
+        )}
+        {socialLinks.linkedin && (
+          <a href={socialLinks.linkedin} target="_blank" rel="noreferrer" className="hover:text-green-400 transition-colors duration-300">
+            <Linkedin />
+          </a>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default TopRatedAuthor;

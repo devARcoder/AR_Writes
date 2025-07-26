@@ -3,6 +3,7 @@ import BlogCard from './BlogCard'
 import TopRatedAuthor from './TopRatedAuthor'
 import FeaturedPost from './FeaturedPost'
 import { blogData } from '../../data/blogDataStore'
+import { topRatedAuthor, featuredPostData } from '../../data/data'
 
 const Blogs = () => {
   return (
@@ -16,8 +17,8 @@ const Blogs = () => {
 
       {/* Right Column - Author & Featured Posts */}
       <div className="lg:w-1/3 flex flex-col space-y-6 mt-6 lg:mt-0">
-        <TopRatedAuthor />
-        <FeaturedPost />
+        <TopRatedAuthor {...topRatedAuthor} />
+        <FeaturedPost {...featuredPostData} />
       </div>
     </div>
   )
