@@ -25,15 +25,15 @@ const BlogDetails = () => {
   return (
     <>
     <div className="bg-[#222] px-6 py-4 md:px-9 lg:px-16">
-      <div className="breadcrum flex items-center my-4 text-white">
+      <div className="breadcrum flex items-center my-4 text-white text-xs md:text-lg font-semibold">
         <Link to="/">Home</Link>
         <ChevronRight size={20} className="pt-1"/>
         <Link to="/">{blog.category}</Link>
         <ChevronRight size={20} className="pt-1"/>
-        <Link className="line-clamp-1" to="#">{blog.title}</Link>
+        <Link className="line-clamp-1 text-gray-200" to="#">{blog.title}</Link>
       </div>
 
-      <div className=" mr-3">
+      <div className=" mr-3 ">
         <div className="img relative">
         {/* Background Image */}
         <img className="w-full h-70 sm:h-85 md:h-96 lg:h-[33rem] rounded-xl md:rounded-2xl object-cover" src={blog.coverImage} alt={blog.title} />
@@ -42,14 +42,16 @@ const BlogDetails = () => {
         <div className="absolute top-0 left-0 h-full lg:h-[33rem] rounded-xl md:rounded-2xl w-full bg-black/30 z-10"></div>
 
         {/* Text Content */}
-        <div className="head absolute flex flex-col justify-center items-center top-15 sm:top-24 lg:top-34 left-4 right-4 z-20 text-white text-center space-y-5">
-          <p className="text-md sm:text-lg md:text-xl text-white">
-            {blog.author.name}  <span className="text-gray-300">on {blog.publishedAt}</span>
+        <div className="head absolute top-15 sm:top-24 lg:top-42 left-4 right-4 z-20 text-white text-center space-y-5">
+          <p className="text-sm sm:text-lg md:text-xl text-white font-semibold">
+            {blog.author.name}  <span className="text-gray-100">on {blog.publishedAt}</span>
           </p>
 
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:mx-24 font-bold md:mx-4 mt-1 line-clamp-3">{blog.title}</h1>
+          <h1 className="text-2xl sm:text-4xl md:text-5xl lg:mx-24 font-bold md:mx-4 mt-1 line-clamp-3">{blog.title}</h1>
 
-          <div className="flex space-x-3 items-center md:mt-8">
+          <p className="hidden lg:block text-gray-100 text-lg">{blog.excerpt}</p>
+
+          <div className="flex flex-wrap justify-center space-y-1 space-x-3 items-center md:mt-8">
   {blog.tags.map((tag, index) => (
     <p
       key={index}
@@ -63,6 +65,12 @@ const BlogDetails = () => {
           
         </div>
       </div>
+      </div>
+
+
+      <div className="data text-white">
+        <p>{blog.excerpt}</p>
+        <p>{blog.content}</p>
       </div>
     </div>
     </>

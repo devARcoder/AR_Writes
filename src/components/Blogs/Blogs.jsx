@@ -23,11 +23,18 @@ const Blogs = ({ blogs }) => {
     setTimeout(() => {
       setVisibleBlogs((prev) => prev + 5);
       setIsLoadingMore(false);
-    }, 1200); // Simulate a network delay
+    }, 1200); // Simulate network delay
+  };
+
+  const handleShowLess = () => {
+    setVisibleBlogs(5);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   // Blogs to display
-  const displayBlogs = blogs !== undefined ? blogs.slice(0, visibleBlogs) : blogData.slice(0, visibleBlogs);
+  const displayBlogs = blogs !== undefined
+    ? blogs.slice(0, visibleBlogs)
+    : blogData.slice(0, visibleBlogs);
 
   // Suggestions for "no blogs found"
   const suggestions = blogData.slice(0, 3).map((blog) => blog.title);
@@ -46,21 +53,30 @@ const Blogs = ({ blogs }) => {
               <BlogCard key={blog.id || i} blog={blog} />
             ))}
 
-            {/* Load More Button */}
-            {visibleBlogs < blogData.length && (
-              <div className="text-center py-6">
-                {isLoadingMore ? (
-                  <BlogCardLoading />
-                ) : (
-                  <button
-                    onClick={handleLoadMore}
-                    className="px-5 py-2 bg-gray-700 text-white rounded-lg animate-bounce hover:bg-gray-600 transition"
-                  >
-                    Load More
-                  </button>
-                )}
-              </div>
-            )}
+            {/* Show Skeleton Cards when Loading More */}
+            {isLoadingMore &&
+              Array(2).fill(null).map((_, i) => <BlogCardLoading key={`loading-${i}`} />)
+            }
+
+            {/* Load More & Show Less Buttons */}
+            <div className="text-center py-6 space-x-4">
+              {visibleBlogs < blogData.length && !isLoadingMore && (
+                <button
+                  onClick={handleLoadMore}
+                  className="px-5 py-2 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition"
+                >
+                  Load More
+                </button>
+              )}
+              {visibleBlogs > 5 && !isLoadingMore && (
+                <button
+                  onClick={handleShowLess}
+                  className="px-5 py-2 bg-red-600 text-white rounded-lg hover:bg-red-500 transition"
+                >
+                  Show Less
+                </button>
+              )}
+            </div>
           </>
         ) : (
           <div className="text-center py-10 text-gray-400">
