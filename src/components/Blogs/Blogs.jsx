@@ -9,32 +9,17 @@ import { blogData } from '../../data/blogDataStore';
 import { topRatedAuthor, featuredPostData } from '../../data/data';
 
 const Blogs = ({ blogs }) => {
-  const [loading, setLoading] = useState(true);       // Page loading state
-  const [visibleBlogs, setVisibleBlogs] = useState(5); // Start with 5 blogs
-  const [isLoadingMore, setIsLoadingMore] = useState(false);
+  const [loading, setLoading] = useState(true); // Page loading state
 
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 2000);
     return () => clearTimeout(timer);
   }, []);
 
-  const handleLoadMore = () => {
-    setIsLoadingMore(true);
-    setTimeout(() => {
-      setVisibleBlogs((prev) => prev + 5);
-      setIsLoadingMore(false);
-    }, 1200); // Simulate network delay
-  };
-
-  const handleShowLess = () => {
-    setVisibleBlogs(5);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
-  // Blogs to display
+  // Always display only the first 5 blogs
   const displayBlogs = blogs !== undefined
-    ? blogs.slice(0, visibleBlogs)
-    : blogData.slice(0, visibleBlogs);
+    ? blogs.slice(0, 5)
+    : blogData.slice(0, 5);
 
   // Suggestions for "no blogs found"
   const suggestions = blogData.slice(0, 3).map((blog) => blog.title);
@@ -52,31 +37,6 @@ const Blogs = ({ blogs }) => {
             {displayBlogs.map((blog, i) => (
               <BlogCard key={blog.id || i} blog={blog} />
             ))}
-
-            {/* Show Skeleton Cards when Loading More */}
-            {isLoadingMore &&
-              Array(2).fill(null).map((_, i) => <BlogCardLoading key={`loading-${i}`} />)
-            }
-
-            {/* Load More & Show Less Buttons */}
-            <div className="text-center py-6 space-x-4">
-              {visibleBlogs < blogData.length && !isLoadingMore && (
-                <button
-                  onClick={handleLoadMore}
-                  className="px-5 py-2 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition"
-                >
-                  Load More
-                </button>
-              )}
-              {visibleBlogs > 5 && !isLoadingMore && (
-                <button
-                  onClick={handleShowLess}
-                  className="px-5 py-2 bg-red-600 text-white rounded-lg hover:bg-red-500 transition"
-                >
-                  Show Less
-                </button>
-              )}
-            </div>
           </>
         ) : (
           <div className="text-center py-10 text-gray-400">
