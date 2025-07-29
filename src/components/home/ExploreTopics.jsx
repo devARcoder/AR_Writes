@@ -33,7 +33,9 @@ const ExploreTopics = () => {
   };
 
   return (
-    <div className="px-5 py-6">
+    <>
+    <div className="px-5 py-6 ">
+      
       {/* Heading */}
       <h1 className="text-center font-bold text-gray-400 text-sm md:text-xl">
         EXPLORE TRENDING TOPICS
@@ -94,6 +96,7 @@ const ExploreTopics = () => {
       {/* Blogs Section */}
       <Blogs blogs={filteredBlogs} />
     </div>
+    </>
   );
 };
 

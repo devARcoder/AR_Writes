@@ -3,8 +3,9 @@ import Button from '../shared/common/Button'
 
 const navigationLink = [
     {name: "Home"},
+    {name: "Explore"},
+    {name: "Collaborate"},
     {name: "About"},
-    {name: "Trending"},
     {name: "Contact"},
 ]
 const Sidebar = () => {

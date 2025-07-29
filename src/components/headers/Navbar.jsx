@@ -1,8 +1,9 @@
 import React from 'react'
 const navbarLinks = [
     {name: "Home"},
+    {name: "Explore"},
+    {name: "Collaborate"},
     {name: "About"},
-    {name: "Trending"},
     {name: "Contact"},
 ]
 const Navbar = () => {
