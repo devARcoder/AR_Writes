@@ -25,7 +25,7 @@ const BlogDetails = () => {
   return (
     <>
     <div className="bg-[#222] px-6 py-4 md:px-9 lg:px-16">
-      <div className="breadcrum flex items-center my-4 text-white text-xs md:text-lg font-semibold">
+      <div className="breadcrum flex items-center my-4 text-white text-sm md:text-md font-semibold">
         <Link to="/">Home</Link>
         <ChevronRight size={20} className="pt-1"/>
         <Link to="/">{blog.category}</Link>
@@ -36,13 +36,13 @@ const BlogDetails = () => {
       <div className=" mr-3 ">
         <div className="img relative">
         {/* Background Image */}
-        <img className="w-full h-70 sm:h-85 md:h-96 lg:h-[33rem] rounded-xl md:rounded-2xl object-cover" src={blog.coverImage} alt={blog.title} />
+        <img className="w-full h-60 sm:h-73 md:h-85 lg:h-[25rem] rounded-xl md:rounded-2xl object-cover" src={blog.coverImage} alt={blog.title} />
 
         {/* Gradient Overlay */}
-        <div className="absolute top-0 left-0 h-full lg:h-[33rem] rounded-xl md:rounded-2xl w-full bg-black/30 z-10"></div>
+        <div className="absolute top-0 left-0 h-full lg:h-[25rem] rounded-xl md:rounded-2xl w-full bg-black/30 z-10"></div>
 
         {/* Text Content */}
-        <div className="head absolute top-15 sm:top-24 lg:top-42 left-4 right-4 z-20 text-white text-center space-y-5">
+        <div className="head absolute top-10 sm:top-16 md:top-20 lg:top-24 left-4 right-4 z-20 text-white text-center space-y-5">
           <p className="text-sm sm:text-lg md:text-xl text-white font-semibold">
             {blog.author.name}  <span className="text-gray-100">on {blog.publishedAt}</span>
           </p>

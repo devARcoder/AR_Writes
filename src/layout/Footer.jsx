@@ -1,11 +1,12 @@
 import { Facebook, Github, Linkedin, Twitter } from "lucide-react";
 import React from "react";
 import { Link } from "react-router-dom";
+import FooterSection from "../components/footer/FooterSection";
 const Footer = () => {
   return (
     <>
-      <div className="flex flex-col bg-[#222] px-4 py-6">
-        <div className="side text-white">
+      <div className="flex flex-col justify-center md:flex-row bg-[#222] px-4 pt-6 pb-6 lg:pt-20">
+        <div className="side text-white md:w-1/2">
             <div className="flex items-center space-x-3 ">
           <Link to="/">
             <div className="side1 shadow-[inset_0_-12px_9px_rgba(0,0,0,0.8)] px-0 py-0 rounded-lg w-fit">
@@ -27,12 +28,15 @@ const Footer = () => {
             <Twitter className="w-9 h-9 hover:text-white/50 border border-white/50 p-2 hover:bg-white/10 rounded-lg"/>
             
           </div>
+          <h1 className="hidden md:block text-sm">© 2025 AR BLOGS | devARcoder | All Rights Reserved</h1>
         </div>
 
 
-        <div className="side2">
-            
-        </div>
+        <FooterSection/>
+      </div>
+
+      <div className=" block md:hidden bg-[#222] text-white text-xs sm:text-sm text-center py-4 border-t border-gray-700">
+        <h1 className="block md:hidden">© 2025 AR BLOGS | devARcoder | All Rights Reserved</h1>
       </div>
     </>
   );
