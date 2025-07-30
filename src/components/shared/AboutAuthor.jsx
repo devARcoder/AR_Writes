@@ -10,15 +10,15 @@ const AboutAuthor = () => {
       // // Find the blog by ID
       const blog = blogData.find((b) => String(b.id) === id);
   return (
-    <div className=" bg-[#1c1c1c] w-full rounded-xl p-8 inset-shadow-sm w-full  inset-shadow-black/30 lg:mt-6">
+    <div className=" bg-[#1c1c1c] w-full rounded-xl p-8 inset-shadow-xs w-full  inset-shadow-black/20 lg:mt-6">
       {/* Heading */}
-      <h1 className="text-gray-400 text-md font-semibold">About</h1>
+      <h1 className="text-gray-400 text-md font-semibold">About Author</h1>
 
       {/* Author Info */}
       <div className="flex items-center space-x-3 pt-4">
         <div className="img">
           <img
-            className="rounded-full border-2 border-green-500 w-14 h-14 object-cover"
+            className="rounded-full w-18 h-14 object-cover"
             src={blog.author.avatar}
             alt={blog.author.name}
           />
