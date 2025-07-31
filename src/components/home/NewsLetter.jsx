@@ -17,7 +17,7 @@ const NewsLetter = () => {
           <div className="w-full relative">
             <input
               placeholder="Enter Your Email"
-              className="text-gray-300 border border-gray-600 focus:outline-none bg-[#1c1c1c] rounded-lg 
+              className="text-gray-300 border border-black/60 focus:outline-none bg-[#1c1c1c] rounded-lg 
                 px-3 py-3 text-base 
                 md:py-2.5 md:text-sm 
                 lg:py-3 lg:text-base 

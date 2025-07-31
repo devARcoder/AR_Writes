@@ -1,5 +1,5 @@
-import { ChevronRight, Linkedin, Twitter, Facebook } from "lucide-react";
-import React from "react";
+import { ChevronRight, Linkedin, Twitter, Facebook, ChevronLeft } from "lucide-react";
+import React, { useEffect} from "react";
 import { Link } from "react-router-dom";
 import { useParams, useNavigate } from "react-router-dom";
 import { blogData } from "../../data/blogDataStore";
@@ -11,7 +11,19 @@ const BlogDetails = () => {
   const { id } = useParams();
   const navigate = useNavigate();
 
-  const blog = blogData.find((b) => String(b.id) === id);
+  const currentIndex = blogData.findIndex((b) => String(b.id) === id);
+  const blog = blogData[currentIndex];
+
+  // Get previous and next posts
+  const previousPost = currentIndex > 0 ? blogData[currentIndex - 1] : null;
+  const nextPost = currentIndex < blogData.length - 1 ? blogData[currentIndex + 1] : null;
+
+  useEffect(() => {
+  window.scrollTo({
+  top: 0,
+  behavior: "smooth"
+});
+}, [id]);
 
   if (!blog) {
     return (
@@ -106,9 +118,43 @@ const BlogDetails = () => {
         <div className="flex text-white justify-between items-center pt-12">
           <h1 className="font-bold">{blog.author.name}<span className="text-gray-200 text-sm font-semibold"> on {blog.publishedAt}</span></h1>
 
-          <h1 className="bg-black/50 px-5 text-[17px] font-semibold py-0.5 border border-black/60 rounded-md">{blog.category}</h1>
+          <h1 className="bg-black/20 px-5 text-[14px] font-semibold py-0.5 border border-black/20 rounded-md">{blog.category}</h1>
         </div>
 
+        {/* Previous and Next Post Navigation */}
+        <div className="flex justify-between mt-8 mb-12 border-t border-b border-gray-700 py-6">
+          {previousPost ? (
+            <Link 
+              to={`/blog/${previousPost.id}`}
+              className="flex items-center space-x-2 group bg-black/20 py-6 px-6 rounded-lg"
+            >
+              <ChevronLeft className="w-6 h-6 text-gray-300 group-hover:text-gray-400 transition" />
+              <div>
+                <p className="text-gray-400 text-sm">Previous Post</p>
+                <p className="text-white font-medium group-hover:text-gray-300 transition line-clamp-1">
+                  {previousPost.title.slice(0, 30) + "..."}
+                </p>
+              </div>
+            </Link>
+          ) : (
+            <div></div> // Empty div to maintain flex spacing
+          )}
+          
+          {nextPost && (
+            <Link 
+              to={`/blog/${nextPost.id}`}
+              className="flex items-center space-x-2 group ml-auto text-right bg-black/20 py-6 px-5 rounded-lg"
+            >
+              <div>
+                <p className="text-gray-400 text-sm">Next Post</p>
+                <p className="text-white font-medium group-hover:text-gray-300 transition line-clamp-1">
+                  {nextPost.title.slice(0, 30) + "..."}
+                </p>
+              </div>
+              <ChevronRight className="w-6 h-6 text-gray-300 group-hover:text-gray-400 transition" />
+            </Link>
+          )}
+        </div>
 
         <div className="flex items-center space-x-3 my-4 text-white">
           <h1 className="text-xl font-bold">Share Post on - </h1>
