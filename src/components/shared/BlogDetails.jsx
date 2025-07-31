@@ -4,12 +4,13 @@ import { Link } from "react-router-dom";
 import { useParams, useNavigate } from "react-router-dom";
 import { blogData } from "../../data/blogDataStore";
 import AboutAuthor from "./AboutAuthor";
+import AuthorFeaturedPost from "./AuthorFeaturedPost";
+import AuthotExperience from "./AuthorExperience";
 
 const BlogDetails = () => {
   const { id } = useParams();
   const navigate = useNavigate();
 
-  // // Find the blog by ID
   const blog = blogData.find((b) => String(b.id) === id);
 
   if (!blog) {
@@ -43,17 +44,13 @@ const BlogDetails = () => {
 
         <div className=" mr-3 ">
           <div className="img relative">
-            {/* Background Image */}
+           
             <img
               className="w-full h-60 sm:h-73 md:h-85 lg:h-[25rem] rounded-xl md:rounded-2xl object-cover"
               src={blog.coverImage}
               alt={blog.title}
             />
-
-            {/* Gradient Overlay */}
             <div className="absolute top-0 left-0 h-full lg:h-[25rem] rounded-xl md:rounded-2xl w-full bg-black/30 z-10"></div>
-
-            {/* Text Content */}
             <div className="head absolute top-10 sm:top-16 md:top-20 lg:top-24 left-4 right-4 z-20 text-white text-center space-y-5">
               <p className="text-sm sm:text-lg md:text-xl text-white font-semibold">
                 {blog.author.name}{" "}
@@ -88,10 +85,10 @@ const BlogDetails = () => {
           <p>{blog.content}</p>
 
           <h1 className="text-2xl font-bold">
-            {blog.slug.slice(0, 28).charAt(0).toUpperCase() +
-              blog.slug.slice(1, 28)}
+            {blog.slug.charAt(0).toUpperCase() +
+              blog.slug.slice(1)}
           </h1>
-          <p>{blog.content.slice(10, 191)}</p>
+          <p>{blog.content.slice(1301)}</p>
 
           <p>{blog.content.slice(43, 320)}</p>
         </div>
@@ -126,6 +123,8 @@ const BlogDetails = () => {
       <div className="lg:w-1/3 md:mr-25 lg:mr-0 lg:mt-6">
 
           <AboutAuthor/>
+          <AuthorFeaturedPost/>
+          <AuthotExperience/>
       </div>
     </div>
     </>

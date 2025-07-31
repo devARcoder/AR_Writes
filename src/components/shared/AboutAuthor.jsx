@@ -10,7 +10,7 @@ const AboutAuthor = () => {
       // // Find the blog by ID
       const blog = blogData.find((b) => String(b.id) === id);
   return (
-    <div className=" bg-[#1c1c1c] w-full rounded-xl p-8 inset-shadow-xs w-full  inset-shadow-black/20 lg:mt-6">
+    <div className=" bg-[#1c1c1c] w-full rounded-xl p-8 inset-shadow-xs w-full  inset-shadow-black/20 mt-3 lg:mt-6 lg:sticky lg:top-6">
       {/* Heading */}
       <h1 className="text-gray-400 text-md font-semibold">About Author</h1>
 

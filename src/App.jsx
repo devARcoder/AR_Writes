@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import Accounts from './pages/Accounts'
 import BlogDetails from './components/shared/BlogDetails'
 import Footer from './layout/Footer'
+import NewsLetter from './components/home/NewsLetter'
 
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="/accounts" element={<Accounts />} />
 
       </Routes>
+      <NewsLetter/>
       <Footer/>
     </>
   )

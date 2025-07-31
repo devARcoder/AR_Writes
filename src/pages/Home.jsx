@@ -10,7 +10,6 @@ const Home = () => {
 
       <Hero/>
       <ExploreTopics/>
-      <NewsLetter/>
     </div>
     </>
   )
