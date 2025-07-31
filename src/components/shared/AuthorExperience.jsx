@@ -11,12 +11,9 @@ const AuthorExperience = () => {
 
   return (
     <div className="bg-[#1c1c1c] w-full rounded-xl p-8  lg:mt-6 lg:sticky lg:top-6">
-      {/* Heading */}
       <h1 className="text-gray-400 text-md font-semibold mb-4">
         Work Experience
       </h1>
-
-      {/* Work Experience Section */}
       <div className="mb-6">
         {workExperience.map((job, index) => (
           <div key={index} className="text-white flex justify-between items-center space-y-2 border-b border-gray-600 py-3">
@@ -28,8 +25,6 @@ const AuthorExperience = () => {
           </div>
         ))}
       </div>
-
-      {/* Technologies Section */}
       <h1 className="text-gray-400 text-md font-semibold mb-4">
         Technologies
       </h1>
