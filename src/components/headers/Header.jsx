@@ -35,7 +35,7 @@ const Header = () => {
         <Link to="/">
           <div className="side1 shadow-[inset_0_-12px_9px_rgba(0,0,0,0.8)] px-1 py-1 rounded-full">
             <img
-              className="w-20 h-20 object-fit"
+              className="w-14 h-14 object-fit"
               src="/images/arb.png"
               alt=""
             />
@@ -75,7 +75,7 @@ const Header = () => {
           <Link to="/">
             <div className="side1 shadow-[inset_0_-12px_9px_rgba(0,0,0,0.8)] px-1 py-1 rounded-full">
               <img
-                className="w-20 h-20 object-fit"
+                className="w-14 h-14 object-fit"
                 src="/images/arb.png"
                 alt=""
               />
