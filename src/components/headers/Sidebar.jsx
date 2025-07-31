@@ -1,20 +1,23 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Button from '../shared/common/Button'
 
 const navigationLink = [
-    {name: "Home"},
-    {name: "Explore"},
-    {name: "Collaborate"},
-    {name: "About"},
+    {name: "Home", to: "/"},
+    {name: "Explore", to: "/explorecategories"},
+    {name: "Collaborate", to: "/collaborate"},
+    {name: "About", to: "/about"},
+    {name: "Contact", to: "/contact"},
     {name: "Contact"},
 ]
-const Sidebar = () => {
+const Sidebar = ({onClose}) => {
+  
   return (
     <>
       <div className="text-white px-5 py-2 space-y-4">
         {navigationLink.map((navigate, i)=> (
             <ul className="px-4" key={i}>
-                <li className='text-xl font-semibold hover:text-gray-200 py-2'>{navigate.name}</li>
+                <li className='text-xl font-semibold hover:text-gray-200 py-2'><Link onClick={onClose} to={navigate.to}>{navigate.name}</Link></li>
             </ul>
         ))}
 

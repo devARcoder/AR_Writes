@@ -6,16 +6,20 @@ import Accounts from './pages/Accounts'
 import BlogDetails from './components/shared/BlogDetails'
 import Footer from './layout/Footer'
 import NewsLetter from './components/home/NewsLetter'
+import ExplorePosts from './pages/ExplorePosts'
 
 
 const App = () => {
+  
   return (
     <>
     <Headers/>
     <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/blog/:id" element={<BlogDetails/>} />
+        <Route path="/explorecategories" element={<ExplorePosts />} />
         <Route path="/accounts" element={<Accounts />} />
+        
 
       </Routes>
       <NewsLetter/>

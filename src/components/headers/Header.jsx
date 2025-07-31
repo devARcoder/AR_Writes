@@ -90,7 +90,7 @@ const Header = () => {
           </div>
         </div>
 
-        <Sidebar />
+        <Sidebar onClose={closeSidebar} />
       </div>
     </>
   );

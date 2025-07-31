@@ -10,7 +10,7 @@ const FeaturedPost = () => {
       <h1 className="text-gray-400 text-md font-semibold pb-4">Featured Post</h1>
       <div className="img relative">
         {/* Background Image */}
-        <img className="w-full h-64 object-cover" src={coverImage} alt={title} />
+        <img className="w-full h-64 object-cover rounded-xl" src={coverImage} alt={title} />
 
         {/* Gradient Overlay */}
         <div className="absolute top-0 left-0 h-full w-full bg-gradient-to-t from-black/80 via-black/40 to-transparent z-10"></div>

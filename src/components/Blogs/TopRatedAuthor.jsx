@@ -11,7 +11,7 @@ const TopRatedAuthor = ({ avatar, name, field, intro, location, socialLinks }) =
       <div className="flex items-center space-x-3 pt-4">
         <div className="img">
           <img
-            className="rounded-full border-2 border-green-500 w-14 h-14 object-cover"
+            className="rounded-full w-14 h-14 object-cover"
             src={avatar}
             alt={name}
           />
