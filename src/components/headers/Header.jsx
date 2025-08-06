@@ -22,7 +22,7 @@ const Header = () => {
 
   return (
     <>
-      <div className="flex justify-between items-center px-5 sm:px-7 md:px-8 py-3 bg-[#222]">
+      <div className="flex justify-between items-center px-5 sm:px-7 md:px-8 lg:px-12 py-3 bg-[#222]">
         <div className="menu shadow-[inset_0_-12px_9px_rgba(0,0,0,0.8)] px-2 py-2 rounded-md lg:hidden">
           <Menu
             onClick={toggleSidebar}

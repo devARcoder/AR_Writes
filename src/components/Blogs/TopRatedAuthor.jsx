@@ -37,18 +37,14 @@ const TopRatedAuthor = ({ avatar, name, field, intro, location, socialLinks }) =
 
       {/* Social Links */}
       <div className="flex space-x-4 items-center pt-6 text-gray-300">
-        {socialLinks.twitter && (
-          <a href={socialLinks.twitter} target="_blank" rel="noreferrer" className="hover:text-green-400 transition-colors duration-300">
-            <Twitter />
-          </a>
-        )}
+        
         {socialLinks.website && (
-          <a href={socialLinks.facebook} target="_blank" rel="noreferrer" className="hover:text-green-400 transition-colors duration-300">
+          <a href={socialLinks.website} target="_blank" rel="noreferrer" className="hover:text-green-400 transition-colors duration-300">
             <Globe/>
           </a>
         )}
         {socialLinks.github && (
-          <a href={socialLinks.instagram} target="_blank" rel="noreferrer" className="hover:text-green-400 transition-colors duration-300">
+          <a href={socialLinks.github} target="_blank" rel="noreferrer" className="hover:text-green-400 transition-colors duration-300">
             <Github/>
           </a>
         )}

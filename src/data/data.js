@@ -1,21 +1,23 @@
 import {
   Atom,
   BriefcaseBusiness,
-  Drama,
+  Newspaper,
   Hospital,
   Laptop,
-  Microscope,
-  Trophy,
+  Building2,
+  Landmark,
+  Plane,
 } from "lucide-react";
 
 export const exploreTopicsData = [
-  { category: "General", icon: Atom },
-  { category: "Business", icon: BriefcaseBusiness },
+  { category: "Work", icon: Atom },
+  { category: "Travel", icon: Plane },
   { category: "Technology", icon: Laptop },
-  { category: "Sports", icon: Trophy },
-  { category: "Entertainment", icon: Drama },
+  { category: "Business", icon: BriefcaseBusiness },
   { category: "Health", icon: Hospital },
-  { category: "Science", icon: Microscope },
+  { category: "Finance", icon: Landmark },
+  { category: "News", icon: Newspaper },
+  { category: "Startup", icon: Building2 },
 ];
 
 export const topRatedAuthor = {
@@ -29,9 +31,9 @@ export const topRatedAuthor = {
     city: "Peshawar",
   },
   socialLinks: {
-    twitter: "https://twitter.com/jonathanblake",
-    linkedin: "https://www.linkedin.com/in/jonathanblake",
-    github: "https://github.com/devarcoder",
+    
+    linkedin: "https://www.linkedin.com/in/abdur-razzaq-8b569a335/",
+    github: "https://github.com/devARcoder",
     website: "https://devarcoder.vercel.app/"
   }
 };

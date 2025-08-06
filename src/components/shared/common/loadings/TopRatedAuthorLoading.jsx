@@ -30,7 +30,7 @@ const TopRatedAuthorLoading = () => {
 
       {/* Social Links */}
       <div className="flex space-x-4 items-center pt-6">
-        {[...Array(4)].map((_, i) => (
+        {[...Array(3)].map((_, i) => (
           <div key={i} className="w-6 h-6 bg-gray-700 rounded-full"></div>
         ))}
       </div>

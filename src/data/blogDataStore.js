@@ -1618,7 +1618,7 @@ export const blogData = [
       ]
     }
   ]
-}
+},
 
 
 ]
