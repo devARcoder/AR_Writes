@@ -19,11 +19,8 @@ const ExploreCategories = () => {
   return (
     <>
       <div className="grid grid-cols-2 lg:grid-cols-4">
-        {visibleBlogData.map((allData, i) => (
-          <div className="" key={i}>
-            <img src={allData.coverImage} alt="" />
-            <h1>{allData.title}</h1>
-          </div>
+        {visibleBlogData.map((allBlogs, i) => (
+          <div className="" key={i}></div>
         ))}
       </div>
 
