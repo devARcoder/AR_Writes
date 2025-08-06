@@ -1,26 +1,26 @@
 import React, { useState } from 'react'
 import { blogData } from '../../data/blogDataStore'
+import PostCards from './PostCards'
 
 const ExploreCategories = () => {
-  const [visibleItems, setVisibleItems] = useState(12) // Start with 12 items
-  const itemsPerLoad = 7 // How many more items to load each time
-
-  // Slice the data based on how many items are currently visible
+  const [visibleItems, setVisibleItems] = useState(12)
+  const itemsPerLoad = 7
   const visibleBlogData = blogData.slice(0, visibleItems)
 
   const loadMore = () => {
-    // Increase the number of visible items
+   
     setVisibleItems(prev => prev + itemsPerLoad)
   }
 
-  // Check if there are more items to load
+  
   const hasMoreItems = visibleItems < blogData.length
 
   return (
     <>
-      <div className="grid grid-cols-2 lg:grid-cols-4">
+    
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center  bg-[#222] px-4 py-4">
         {visibleBlogData.map((allBlogs, i) => (
-          <div className="" key={i}></div>
+          <PostCards key={i} blog={allBlogs}/>
         ))}
       </div>
 
