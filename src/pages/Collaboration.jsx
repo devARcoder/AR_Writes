@@ -1,10 +1,12 @@
 import React from 'react'
-
+import TopContributor from '../components/collaboration/TopContributor'
 const Collaboration = () => {
   return (
-    <div>
-      
-    </div>
+    <>
+      <div className='bg-[#222]'>
+        <TopContributor/>
+      </div>
+    </>
   )
 }
 

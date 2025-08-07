@@ -7,6 +7,7 @@ import BlogDetails from './components/shared/BlogDetails'
 import Footer from './layout/Footer'
 import NewsLetter from './components/home/NewsLetter'
 import ExplorePosts from './pages/ExplorePosts'
+import Collaboration from './pages/Collaboration'
 
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/blog/:id" element={<BlogDetails/>} />
         <Route path="/explorecategories" element={<ExplorePosts />} />
+        <Route path="/collaborate" element={<Collaboration/>} />
         <Route path="/accounts" element={<Accounts />} />
         
 
