@@ -19,7 +19,7 @@ const ExploreCategories = () => {
   return (
     <>
     <div className="text-white bg-[#222] text-center py-6 md:py-8 md:py-12 px-4 md:px-14 space-y-2">
-      <h1 className='text-3xl md:text-4xl font-bold'> Explore Without Limits</h1>
+      <h1 className='text-3xl md:text-4xl font-bold bg-gradient-to-t from-white/10 to-white bg-clip-text text-transparent'> Explore Without Limits</h1>
       <p className='text-gray-300'>Get inside the minds of writers, developers, designers, storytellers and more. Their words might spark your next idea.</p>
     </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center md:space-x-3  bg-[#222] px-4 md:px-8 lg:px-14 py-4">

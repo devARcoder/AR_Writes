@@ -8,13 +8,14 @@ import Footer from './layout/Footer'
 import NewsLetter from './components/home/NewsLetter'
 import ExplorePosts from './pages/ExplorePosts'
 import Collaboration from './pages/Collaboration'
-
+import { Toaster } from 'react-hot-toast';
 
 const App = () => {
   
   return (
     <>
     <Headers/>
+    <Toaster/>
     <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/blog/:id" element={<BlogDetails/>} />
