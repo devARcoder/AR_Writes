@@ -10,14 +10,14 @@ import {
 } from "lucide-react";
 
 export const exploreTopicsData = [
-  { category: "Work", icon: Atom },
-  { category: "Travel", icon: Plane },
-  { category: "Technology", icon: Laptop },
-  { category: "Business", icon: BriefcaseBusiness },
-  { category: "Health", icon: Hospital },
-  { category: "Finance", icon: Landmark },
-  { category: "News", icon: Newspaper },
-  { category: "Startup", icon: Building2 },
+  { category: "Work", to: "/work", icon: Atom },
+  { category: "Travel", to: "/travel", icon: Plane },
+  { category: "Technology", to: "/technology", icon: Laptop },
+  { category: "Business", to: "/business", icon: BriefcaseBusiness },
+  { category: "Health", to: "/health", icon: Hospital },
+  { category: "Finance", to: "/finance", icon: Landmark },
+  { category: "News", to: "/news", icon: Newspaper },
+  { category: "Startup", to: "/startup", icon: Building2 },
 ];
 
 export const topRatedAuthor = {

@@ -4,6 +4,7 @@ import { blogData } from '../../data/blogDataStore';
 import { Search } from 'lucide-react';
 import Input from '../shared/common/Input';
 import Blogs from '../Blogs/Blogs';
+import { Link } from 'react-router-dom';
 
 const ExploreTopics = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -81,14 +82,16 @@ const ExploreTopics = () => {
         {exploreTopicsData.map((item) => {
           const Icon = item.icon;
           return (
+            <Link to={item.to}>
             <div
               key={item.category}
               className="flex items-center space-x-2 border border-[rgba(0,0,0,0.2)] 
-                w-fit bg-[rgba(0,0,0,0.1)] hover:bg-[rgba(0,0,0,0.3)] px-6 py-3 my-3 rounded-full cursor-pointer transition-all duration-300"
+              w-fit bg-[rgba(0,0,0,0.1)] hover:bg-[rgba(0,0,0,0.3)] px-6 py-3 my-3 rounded-full cursor-pointer transition-all duration-300"
             >
               <Icon className="w-5 h-5" />
               <span className="font-bold">{item.category}</span>
             </div>
+              </Link>
           );
         })}
       </div>
