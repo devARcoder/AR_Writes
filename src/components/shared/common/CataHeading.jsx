@@ -3,7 +3,7 @@ import React from 'react'
 const CataHeading = ({heading, paragraph}) => {
   return (
     <>
-      <div className="text-white pt-6 space-y-2">
+      <div className="text-white py-9 mb-6 space-y-2 border-b border-white/40">
         <h1 className='text-3xl font-bold'>{heading}</h1>
         <p className='text-gray-300 w-[70%] md:w-[50%]'>{paragraph}</p>
       </div>

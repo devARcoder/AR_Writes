@@ -47,7 +47,7 @@ const BlogDetails = () => {
         <div className="breadcrum flex items-center my-4 text-white text-sm md:text-md font-semibold">
           <Link to="/">Home</Link>
           <ChevronRight size={20} className="pt-1" />
-          <Link to="/">{blog.category}</Link>
+          <Link to={`/${blog.category}`}>{blog.category}</Link>
           <ChevronRight size={20} className="pt-1" />
           <Link className="line-clamp-1 text-gray-200" to="#">
             {blog.title}
