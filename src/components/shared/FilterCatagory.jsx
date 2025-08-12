@@ -36,7 +36,7 @@ const FilterCatagory = ({ categoryName }) => {
     <h3 className='absolute top-6 left-6 bg-white text-black text-sm px-2 py-1 rounded-md font-semibold'>{post.category}</h3>
   </div>
 
-  <div className="flex space-x-2 mt-4 md:mt-0 items-center">
+  <div className="flex space-x-2 mt-4 md:mt-3 items-center">
     <h1 className="text-white font-semibold text-[15px] hover:text-gray-300 cursor-pointer">{post.author.name}</h1>
     <p className="text-gray-200 text-[13px]">
       <span className="text-gray-200 text-[13px] pr-2">on</span>{post.publishedAt}

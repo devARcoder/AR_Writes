@@ -7,7 +7,7 @@ const Breadcrumbs = ({cataName}) => {
         <div className="breadcrum flex items-center text-white text-sm md:text-md font-semibold">
           <Link to="/">Home</Link>
           <ChevronRight size={20} className="pt-1" />
-          <Link className='text-gray-300' to="/">{cataName}</Link>
+          <Link className='text-gray-300' to="#">{cataName}</Link>
         </div>
     </>
   )
