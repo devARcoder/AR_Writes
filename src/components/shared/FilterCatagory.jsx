@@ -13,15 +13,15 @@ const FilterCatagory = ({ categoryName }) => {
   }
 
   return (
-    <div className="category-posts grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center md:space-x-3  bg-[#222] px-4 md:px-8 lg:px-14 py-4">
+    <>
       {filteredData.map((post) => (
         <div className="text-white post-item" key={post.id || post.title}>
-            <img className='w-40 h-40' src={post.coverImage} alt="" />
+            <img className='h-1/1 w-full object-cover' src={post.coverImage} alt="" />
           <h1>{post.title}</h1>
           {/* Add other post details as needed */}
         </div>
       ))}
-    </div>
+    </>
   );
 };
 
