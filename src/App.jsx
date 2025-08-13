@@ -17,6 +17,7 @@ import Health from './pages/Health'
 import Startup from './pages/Startup'
 import News from './pages/News'
 import Finance from './pages/Finance'
+import About from './pages/About'
 
 const App = () => {
   
@@ -37,6 +38,7 @@ const App = () => {
         <Route path="/news" element={<News />} />
         <Route path="/startup" element={<Startup />} />
         <Route path="/collaborate" element={<Collaboration/>} />
+        <Route path="/about" element={<About/>} />
         <Route path="/accounts" element={<Accounts />} />
         
 
