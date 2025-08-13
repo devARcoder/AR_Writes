@@ -22,8 +22,8 @@ const Sidebar = ({onClose}) => {
                       onClick={onClose}
                       className={({ isActive }) => 
                           isActive 
-                              ? "text-gray-200 font-bold" 
-                              : "hover:text-gray-200"
+                              ? "text-gray-200 font-bold bg-black/30 px-5 py-1.5 rounded-lg" 
+                              : "hover:text-gray-200 px-5 py-1.5"
                       }
                   >
                       {navigate.name}

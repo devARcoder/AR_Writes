@@ -12,14 +12,14 @@ const navbarLinks = [
 const Navbar = () => {
   return (
     <>
-      <div className="text-white flex space-x-9">
+      <div className="text-white flex space-x-5">
         {navbarLinks.map((navigate, i) => (
             <ul className="" key={i}>
                 <li className='text-xl font-semibold'>
                     <NavLink 
                         to={navigate.to}
                         className={({ isActive }) => 
-                            isActive ? "text-gray-200 font-bold" : "hover:text-gray-200"
+                            isActive ? "text-gray-200 font-bold bg-black/30 px-5 py-1.5 rounded-lg" : "hover:text-gray-200 px-5 py-1.5"
                         }
                     >
                         {navigate.name}
