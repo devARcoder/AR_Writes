@@ -12,9 +12,9 @@ const BlogCard = ({ blog }) => {
 
   return (
     <div className="flex flex-col py-8 md:flex-row md:space-x-5 sm:mx-14 sm:my-8 md:mx-2 lg:my-0 border-b border-gray-600 group">
-      <div className="side1 md:w-[50%]">
-        <div className="img relative cursor-pointer w-full h-48 sm:h-60 md:h-60 inset-shadow-gray-100 shadow-[inset_0_-20px_5px_rgba(0,0,0,0.6)]">
-          <img className="w-full h-full object-cover rounded-xl" src={blog.coverImage} alt="" />
+      <div className="side1 md:w-[50%] ">
+        <div className="img relative cursor-pointer w-full h-48 sm:h-60 md:h-60 inset-shadow-gray-100 shadow-[inset_0_-20px_5px_rgba(0,0,0,0.6)] ">
+          <img className="w-full h-full object-cover rounded-xl " src={blog.coverImage} alt="" />
           <div className="flex space-x-4 absolute top-4 left-4">
             <p className="bg-gray-100 text-gray-800 font-semibold px-3 py-1 rounded-lg text-xs">{blog.category}</p>
             <p className="bg-gray-100 text-gray-800 font-semibold px-3 py-1 rounded-lg text-xs">{blog.slug}</p>
