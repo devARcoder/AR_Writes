@@ -1,14 +1,14 @@
 // import React, { useState } from 'react';
-// import { 
-//   Rocket, 
-//   Globe, 
-//   Users, 
-//   Briefcase, 
-//   Plane, 
-//   Laptop, 
-//   TrendingUp, 
-//   Heart, 
-//   Zap, 
+// import {
+//   Rocket,
+//   Globe,
+//   Users,
+//   Briefcase,
+//   Plane,
+//   Laptop,
+//   TrendingUp,
+//   Heart,
+//   Zap,
 //   Target,
 //   Newspaper,
 //   Mail,
@@ -24,23 +24,23 @@
 //   const [email, setEmail] = useState('');
 //   const [hoveredCard, setHoveredCard] = useState(null);
 
-//   const whyBlogExists = [
-//     {
-//       icon: <Rocket className="w-8 h-8" />,
-//       title: "No Fluff, Just Value",
-//       description: "I share only tested strategies and real-world insights."
-//     },
-//     {
-//       icon: <Globe className="w-8 h-8" />,
-//       title: "Learn From My Journey",
-//       description: "Failures, wins, and authentic life lessons shared openly."
-//     },
-//     {
-//       icon: <Users className="w-8 h-8" />,
-//       title: "Future Community Hub",
-//       description: "Connecting passionate readers and creators worldwide."
-//     }
-//   ];
+// const whyBlogExists = [
+//   {
+//     icon: <Rocket className="w-8 h-8" />,
+//     title: "No Fluff, Just Value",
+//     description: "I share only tested strategies and real-world insights."
+//   },
+//   {
+//     icon: <Globe className="w-8 h-8" />,
+//     title: "Learn From My Journey",
+//     description: "Failures, wins, and authentic life lessons shared openly."
+//   },
+//   {
+//     icon: <Users className="w-8 h-8" />,
+//     title: "Future Community Hub",
+//     description: "Connecting passionate readers and creators worldwide."
+//   }
+// ];
 
 //   const blogTopics = [
 //     { icon: <Briefcase className="w-6 h-6" />, title: "Work", color: "from-blue-500 to-blue-600" },
@@ -61,7 +61,7 @@
 //         <div className="absolute inset-0 opacity-10">
 //           <div className="absolute inset-0 bg-grid-white/[0.1] bg-[size:50px_50px]" />
 //         </div>
-        
+
 //         {/* Floating Elements */}
 //         <div className="absolute top-20 left-10 w-20 h-20 bg-white/10 rounded-full blur-xl animate-pulse" />
 //         <div className="absolute top-40 right-20 w-32 h-32 bg-purple-300/20 rounded-full blur-2xl animate-bounce" style={{animationDuration: '3s'}} />
@@ -72,7 +72,7 @@
 //             <div className="text-white space-y-6">
 //               <h1 className="text-5xl lg:text-7xl font-bold ">
 //                 About AR Blogs
-                
+
 //               </h1>
 //               <p className="text-xl lg:text-2xl text-purple-100 font-light">
 //                 Where Work, Travel, Tech, Business and more...
@@ -86,11 +86,11 @@
 //                 </button>
 //               </div>
 //             </div>
-            
+
 //             <div className="flex justify-center lg:justify-end">
 //               <div className="relative group">
 //                 <div className="absolute -inset-1 bg-none rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
-//                 <img 
+//                 <img
 //                   src="/images/arb.png"
 //                   alt="Dev ArCoder"
 //                   className="relative w-96 h-96 rounded-full object-cover "
@@ -115,7 +115,7 @@
 
 //           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 //             {whyBlogExists.map((item, index) => (
-//               <div 
+//               <div
 //                 key={index}
 //                 className="group bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-2xl hover:shadow-xl transition-all duration-500 hover:-translate-y-2 border border-gray-200/50"
 //                 onMouseEnter={() => setHoveredCard(index)}
@@ -143,13 +143,13 @@
 //             <div className="space-y-6">
 //               <div className="relative group">
 //                 <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-1000"></div>
-//                 <img 
+//                 <img
 //                   src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=600&fit=crop&crop=face"
 //                   alt="Dev ArCoder"
 //                   className="relative w-full max-w-md mx-auto rounded-2xl object-cover shadow-2xl"
 //                 />
 //               </div>
-              
+
 //               <div className="flex justify-center space-x-6 pt-4">
 //                 {[
 //                   { icon: <Github className="w-6 h-6" />, href: "#" },
@@ -157,7 +157,7 @@
 //                   { icon: <Twitter className="w-6 h-6" />, href: "#" },
 //                   { icon: <Instagram className="w-6 h-6" />, href: "#" }
 //                 ].map((social, index) => (
-//                   <a 
+//                   <a
 //                     key={index}
 //                     href={social.href}
 //                     className="p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110 border border-white/10"
@@ -179,13 +179,13 @@
 //               </div>
 
 //               <p className="text-lg text-gray-300 leading-relaxed">
-//                 I'm a passionate developer who believes in the power of sharing knowledge. 
-//                 Through my journey in tech, travel, and life, I've learned that the best 
+//                 I'm a passionate developer who believes in the power of sharing knowledge.
+//                 Through my journey in tech, travel, and life, I've learned that the best
 //                 insights come from real experiences - both successes and failures.
 //               </p>
 
 //               <div className="pt-6">
-//                 <a 
+//                 <a
 //                   href="https://devarcoder.vercel.app"
 //                   className="inline-flex items-center space-x-3 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white px-8 py-4 rounded-full hover:shadow-lg hover:shadow-emerald-500/25 transition-all duration-300 hover:scale-105 font-medium"
 //                 >
@@ -212,7 +212,7 @@
 
 //           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
 //             {blogTopics.map((topic, index) => (
-//               <div 
+//               <div
 //                 key={index}
 //                 className="group relative overflow-hidden bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100"
 //               >
@@ -253,7 +253,7 @@
 //                   <p className="text-gray-300">Get the latest stories and tips delivered to your inbox</p>
 //                 </div>
 //                 <div className="flex w-full md:w-auto space-x-3">
-//                   <input 
+//                   <input
 //                     type="email"
 //                     value={email}
 //                     onChange={(e) => setEmail(e.target.value)}
@@ -283,7 +283,7 @@
 //                 { icon: <Twitter className="w-6 h-6" />, href: "#", name: "Twitter" },
 //                 { icon: <Instagram className="w-6 h-6" />, href: "#", name: "Instagram" }
 //               ].map((social, index) => (
-//                 <a 
+//                 <a
 //                   key={index}
 //                   href={social.href}
 //                   title={social.name}
@@ -304,28 +304,72 @@
 
 // export default About;
 
-import React from 'react'
-import Button from '../components/shared/common/Button'
+import React from "react";
+import Button from "../components/shared/common/Button";
+// import {
+//   Rocket,
+//   Globe,
+//   Users,
+//   Briefcase,
+//   Plane,
+//   Laptop,
+//   TrendingUp,
+//   Heart,
+//   Zap,
+//   Target,
+//   Newspaper,
+//   Mail,
+//   Github,
+//   Linkedin,
+//   Twitter,
+//   Instagram,
+//   ExternalLink,
+//   ArrowRight
+// } from 'lucide-react';
+// const whyBlogExists = [
+//     {
+//       icon: <Rocket className="w-8 h-8" />,
+//       title: "No Fluff, Just Value",
+//       description: "I share only tested strategies and real-world insights."
+//     },
+//     {
+//       icon: <Globe className="w-8 h-8" />,
+//       title: "Learn From My Journey",
+//       description: "Failures, wins, and authentic life lessons shared openly."
+//     },
+//     {
+//       icon: <Users className="w-8 h-8" />,
+//       title: "Future Community Hub",
+//       description: "Connecting passionate readers and creators worldwide."
+//     }
+//   ];
 const About = () => {
   return (
     <>
-      <div className="bg-[#222] text-white flex flex-col items-center text-center lg:flex-row lg:justify-between pt-10 px-6 py-2 md:px-9 lg:px-16">
-        <div className="side1">
-          <h1 className='text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-t from-white/10 to-white bg-clip-text text-transparent '>AR Blogs Plafrorm</h1>
-          <p className='text-white/50'> Where Work, Travel, Tech, Business and more</p>
+      <div className="">
+        <div className="bg-[#222] text-white flex flex-col items-center text-center lg:flex-row lg:justify-between pt-10 px-6 py-2 md:px-9 lg:px-16">
+          <div className="side1">
+            <h1 className="text-5xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-t from-white/10 to-white bg-clip-text text-transparent ">
+              AR Blogs Write
+            </h1>
+            <p className="text-white/50">
+              {" "}
+              Where Work, Travel, Tech, Business and more
+            </p>
 
-          <div className="buttons flex space-x-2 items-center justify-center mt-6">
-            <Button name="Write" className="text-white/80 " />
-            <Button name="Explore" className="text-white/80 " />
+            <div className="buttons flex space-x-2 items-center justify-center mt-6">
+              <Button name="Write" className="text-white/80 " />
+              <Button name="Explore" className="text-white/80 " />
+            </div>
           </div>
-        </div>
 
-        <div className="side2">
-          <img className='' src="/images/arb.png" alt="" />
+          <div className="side2">
+            <img className="" src="/images/arb.png" alt="" />
+          </div>
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default About
+export default About;
