@@ -96,7 +96,7 @@ const ExploreTopics = () => {
         })}
       </div>
 
-      {/* Blogs Section */}
+      
       <Blogs blogs={filteredBlogs} />
     </div>
     </>
