@@ -1,375 +1,196 @@
-// import React, { useState } from 'react';
-// import {
-//   Rocket,
-//   Globe,
-//   Users,
-//   Briefcase,
-//   Plane,
-//   Laptop,
-//   TrendingUp,
-//   Heart,
-//   Zap,
-//   Target,
-//   Newspaper,
-//   Mail,
-//   Github,
-//   Linkedin,
-//   Twitter,
-//   Instagram,
-//   ExternalLink,
-//   ArrowRight
-// } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Mail, MapPin, Calendar, BookOpen, Heart, Github, Linkedin, Camera, Code, Palette, Link } from 'lucide-react';
 
-// const About = () => {
-//   const [email, setEmail] = useState('');
-//   const [hoveredCard, setHoveredCard] = useState(null);
+const  About = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [hoveredSkill, setHoveredSkill] = useState(null);
 
-// const whyBlogExists = [
-//   {
-//     icon: <Rocket className="w-8 h-8" />,
-//     title: "No Fluff, Just Value",
-//     description: "I share only tested strategies and real-world insights."
-//   },
-//   {
-//     icon: <Globe className="w-8 h-8" />,
-//     title: "Learn From My Journey",
-//     description: "Failures, wins, and authentic life lessons shared openly."
-//   },
-//   {
-//     icon: <Users className="w-8 h-8" />,
-//     title: "Future Community Hub",
-//     description: "Connecting passionate readers and creators worldwide."
-//   }
-// ];
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
 
-//   const blogTopics = [
-//     { icon: <Briefcase className="w-6 h-6" />, title: "Work", color: "from-blue-500 to-blue-600" },
-//     { icon: <Plane className="w-6 h-6" />, title: "Travel", color: "from-emerald-500 to-emerald-600" },
-//     { icon: <Laptop className="w-6 h-6" />, title: "Tech", color: "from-purple-500 to-purple-600" },
-//     { icon: <TrendingUp className="w-6 h-6" />, title: "Finance", color: "from-green-500 to-green-600" },
-//     { icon: <Heart className="w-6 h-6" />, title: "Health", color: "from-pink-500 to-pink-600" },
-//     { icon: <Zap className="w-6 h-6" />, title: "Startups", color: "from-orange-500 to-orange-600" },
-//     { icon: <Newspaper className="w-6 h-6" />, title: "News", color: "from-red-500 to-red-600" },
-//     { icon: <Target className="w-6 h-6" />, title: "Personal Growth", color: "from-indigo-500 to-indigo-600" }
-//   ];
+  const skills = [
+    { name: 'Writing', icon: BookOpen, color: 'text-blue-500', bg: 'bg-black/30' },
+    { name: 'Photography', icon: Camera, color: 'text-purple-500', bg: 'bg-black/30' },
+    { name: 'Web Development', icon: Code, color: 'text-green-500', bg: 'bg-black/30' },
+    { name: 'Design', icon: Palette, color: 'text-pink-500', bg: 'bg-black/30' }
+  ];
 
-//   return (
-//     <div className="min-h-screen bg-gray-50">
-//       {/* Header Section */}
-//       <div className="relative min-h-screen bg-[#222] overflow-hidden">
-//         {/* Background Pattern */}
-//         <div className="absolute inset-0 opacity-10">
-//           <div className="absolute inset-0 bg-grid-white/[0.1] bg-[size:50px_50px]" />
-//         </div>
+  const stats = [
+    { number: '30', label: 'Articles Published' },
+    { number: '5K', label: 'Monthly Readers' },
+    { number: '1', label: 'Years Blogging' },
+    { number: '40', label: 'Sites Repo' }
+  ];
 
-//         {/* Floating Elements */}
-//         <div className="absolute top-20 left-10 w-20 h-20 bg-white/10 rounded-full blur-xl animate-pulse" />
-//         <div className="absolute top-40 right-20 w-32 h-32 bg-purple-300/20 rounded-full blur-2xl animate-bounce" style={{animationDuration: '3s'}} />
-//         <div className="absolute bottom-20 left-20 w-24 h-24 bg-blue-300/20 rounded-full blur-xl animate-pulse" style={{animationDelay: '1s'}} />
-
-//         <div className="relative z-10 container mx-auto px-6 py-20 flex items-center min-h-screen">
-//           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
-//             <div className="text-white space-y-6">
-//               <h1 className="text-5xl lg:text-7xl font-bold ">
-//                 About AR Blogs
-
-//               </h1>
-//               <p className="text-xl lg:text-2xl text-purple-100 font-light">
-//                 Where Work, Travel, Tech, Business and more...
-//               </p>
-//               <div className="flex space-x-4 pt-6">
-//                 <button className="bg-white/10 backdrop-blur-sm border border-white/20 text-white px-8 py-3 rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-105">
-//                   Explore Stories
-//                 </button>
-//                 <button className="bg-gradient-to-r from-emerald-500 to-emerald-600 text-white px-8 py-3 rounded-full hover:shadow-lg hover:shadow-emerald-500/25 transition-all duration-300 hover:scale-105">
-//                   Get Started
-//                 </button>
-//               </div>
-//             </div>
-
-//             <div className="flex justify-center lg:justify-end">
-//               <div className="relative group">
-//                 <div className="absolute -inset-1 bg-none rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
-//                 <img
-//                   src="/images/arb.png"
-//                   alt="Dev ArCoder"
-//                   className="relative w-96 h-96 rounded-full object-cover "
-//                 />
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-
-//       {/* Why This Blog Exists Section */}
-//       <div className="py-20 bg-white">
-//         <div className="container mx-auto px-6">
-//           <div className="text-center mb-16">
-//             <h2 className="text-4xl lg:text-5xl font-bold font-['Poppins'] text-gray-900 mb-4">
-//               Why This Blog Exists
-//             </h2>
-//             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-//               Every story shared here serves a purpose - to inspire, educate, and connect.
-//             </p>
-//           </div>
-
-//           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-//             {whyBlogExists.map((item, index) => (
-//               <div
-//                 key={index}
-//                 className="group bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-2xl hover:shadow-xl transition-all duration-500 hover:-translate-y-2 border border-gray-200/50"
-//                 onMouseEnter={() => setHoveredCard(index)}
-//                 onMouseLeave={() => setHoveredCard(null)}
-//               >
-//                 <div className={`text-blue-600 mb-6 transition-transform duration-300 ${hoveredCard === index ? 'scale-110 rotate-12' : ''}`}>
-//                   {item.icon}
-//                 </div>
-//                 <h3 className="text-xl font-semibold text-gray-900 mb-3 font-['Poppins']">
-//                   {item.title}
-//                 </h3>
-//                 <p className="text-gray-600 leading-relaxed">
-//                   {item.description}
-//                 </p>
-//               </div>
-//             ))}
-//           </div>
-//         </div>
-//       </div>
-
-//       {/* Meet the Creator Section */}
-//       <div className="py-20 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
-//         <div className="container mx-auto px-6">
-//           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-//             <div className="space-y-6">
-//               <div className="relative group">
-//                 <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-1000"></div>
-//                 <img
-//                   src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=600&fit=crop&crop=face"
-//                   alt="Dev ArCoder"
-//                   className="relative w-full max-w-md mx-auto rounded-2xl object-cover shadow-2xl"
-//                 />
-//               </div>
-
-//               <div className="flex justify-center space-x-6 pt-4">
-//                 {[
-//                   { icon: <Github className="w-6 h-6" />, href: "#" },
-//                   { icon: <Linkedin className="w-6 h-6" />, href: "#" },
-//                   { icon: <Twitter className="w-6 h-6" />, href: "#" },
-//                   { icon: <Instagram className="w-6 h-6" />, href: "#" }
-//                 ].map((social, index) => (
-//                   <a
-//                     key={index}
-//                     href={social.href}
-//                     className="p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110 border border-white/10"
-//                   >
-//                     {social.icon}
-//                   </a>
-//                 ))}
-//               </div>
-//             </div>
-
-//             <div className="space-y-6">
-//               <div>
-//                 <h2 className="text-4xl lg:text-5xl font-bold font-['Poppins'] mb-4">
-//                   Dev ArCoder
-//                 </h2>
-//                 <p className="text-xl text-purple-200 mb-6 italic">
-//                   "Coding by profession, storytelling by passion."
-//                 </p>
-//               </div>
-
-//               <p className="text-lg text-gray-300 leading-relaxed">
-//                 I'm a passionate developer who believes in the power of sharing knowledge.
-//                 Through my journey in tech, travel, and life, I've learned that the best
-//                 insights come from real experiences - both successes and failures.
-//               </p>
-
-//               <div className="pt-6">
-//                 <a
-//                   href="https://devarcoder.vercel.app"
-//                   className="inline-flex items-center space-x-3 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white px-8 py-4 rounded-full hover:shadow-lg hover:shadow-emerald-500/25 transition-all duration-300 hover:scale-105 font-medium"
-//                 >
-//                   <span>Visit My Portfolio</span>
-//                   <ExternalLink className="w-5 h-5" />
-//                 </a>
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-
-//       {/* Blog Topics Grid */}
-//       <div className="py-20 bg-white">
-//         <div className="container mx-auto px-6">
-//           <div className="text-center mb-16">
-//             <h2 className="text-4xl lg:text-5xl font-bold font-['Poppins'] text-gray-900 mb-4">
-//               Blog Topics
-//             </h2>
-//             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-//               Exploring diverse subjects that shape our modern world
-//             </p>
-//           </div>
-
-//           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-//             {blogTopics.map((topic, index) => (
-//               <div
-//                 key={index}
-//                 className="group relative overflow-hidden bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100"
-//               >
-//                 <div className={`absolute inset-0 bg-gradient-to-br ${topic.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
-//                 <div className="relative z-10 p-8 text-center">
-//                   <div className="text-gray-600 group-hover:text-white mb-4 transition-colors duration-300 flex justify-center">
-//                     {topic.icon}
-//                   </div>
-//                   <h3 className="font-semibold text-gray-900 group-hover:text-white transition-colors duration-300 font-['Poppins']">
-//                     {topic.title}
-//                   </h3>
-//                 </div>
-//               </div>
-//             ))}
-//           </div>
-//         </div>
-//       </div>
-
-//       {/* Let's Connect Footer */}
-//       <div className="py-20 bg-gradient-to-br from-gray-900 to-black text-white">
-//         <div className="container mx-auto px-6">
-//           <div className="text-center mb-12">
-//             <h2 className="text-4xl lg:text-5xl font-bold font-['Poppins'] mb-4">
-//               Let's Connect
-//             </h2>
-//             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-//               Join the community and stay updated with weekly insights
-//             </p>
-//           </div>
-
-//           <div className="max-w-4xl mx-auto space-y-8">
-//             {/* Email Subscription */}
-//             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
-//               <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4">
-//                 <Mail className="w-8 h-8 text-emerald-400" />
-//                 <div className="flex-1 text-center md:text-left">
-//                   <h3 className="text-xl font-semibold mb-2 font-['Poppins']">Subscribe for Weekly Insights</h3>
-//                   <p className="text-gray-300">Get the latest stories and tips delivered to your inbox</p>
-//                 </div>
-//                 <div className="flex w-full md:w-auto space-x-3">
-//                   <input
-//                     type="email"
-//                     value={email}
-//                     onChange={(e) => setEmail(e.target.value)}
-//                     placeholder="Enter your email"
-//                     className="flex-1 md:w-64 px-4 py-3 rounded-full bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500"
-//                   />
-//                   <button className="bg-gradient-to-r from-emerald-500 to-emerald-600 text-white px-6 py-3 rounded-full hover:shadow-lg hover:shadow-emerald-500/25 transition-all duration-300 hover:scale-105 flex items-center space-x-2">
-//                     <span>Subscribe</span>
-//                     <ArrowRight className="w-4 h-4" />
-//                   </button>
-//                 </div>
-//               </div>
-//             </div>
-
-//             {/* Collaboration */}
-//             <div className="text-center">
-//               <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-12 py-4 rounded-full hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 hover:scale-105 font-medium text-lg">
-//                 🤝 Collaborate With Me
-//               </button>
-//             </div>
-
-//             {/* Social Media */}
-//             <div className="flex justify-center space-x-6 pt-8">
-//               {[
-//                 { icon: <Github className="w-6 h-6" />, href: "#", name: "GitHub" },
-//                 { icon: <Linkedin className="w-6 h-6" />, href: "#", name: "LinkedIn" },
-//                 { icon: <Twitter className="w-6 h-6" />, href: "#", name: "Twitter" },
-//                 { icon: <Instagram className="w-6 h-6" />, href: "#", name: "Instagram" }
-//               ].map((social, index) => (
-//                 <a
-//                   key={index}
-//                   href={social.href}
-//                   title={social.name}
-//                   className="p-4 bg-white/5 backdrop-blur-sm rounded-full hover:bg-white/10 transition-all duration-300 hover:scale-110 border border-white/10 group"
-//                 >
-//                   <div className="text-gray-300 group-hover:text-white transition-colors duration-300">
-//                     {social.icon}
-//                   </div>
-//                 </a>
-//               ))}
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default About;
-
-import React from "react";
-import Button from "../components/shared/common/Button";
-// import {
-//   Rocket,
-//   Globe,
-//   Users,
-//   Briefcase,
-//   Plane,
-//   Laptop,
-//   TrendingUp,
-//   Heart,
-//   Zap,
-//   Target,
-//   Newspaper,
-//   Mail,
-//   Github,
-//   Linkedin,
-//   Twitter,
-//   Instagram,
-//   ExternalLink,
-//   ArrowRight
-// } from 'lucide-react';
-// const whyBlogExists = [
-//     {
-//       icon: <Rocket className="w-8 h-8" />,
-//       title: "No Fluff, Just Value",
-//       description: "I share only tested strategies and real-world insights."
-//     },
-//     {
-//       icon: <Globe className="w-8 h-8" />,
-//       title: "Learn From My Journey",
-//       description: "Failures, wins, and authentic life lessons shared openly."
-//     },
-//     {
-//       icon: <Users className="w-8 h-8" />,
-//       title: "Future Community Hub",
-//       description: "Connecting passionate readers and creators worldwide."
-//     }
-//   ];
-const About = () => {
   return (
-    <>
-      <div className="">
-        <div className="bg-[#222] text-white flex flex-col items-center text-center lg:flex-row lg:justify-between pt-10 px-6 py-2 md:px-9 lg:px-16">
-          <div className="side1">
-            <h1 className="text-5xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-t from-white/10 to-white bg-clip-text text-transparent ">
-              AR Blogs Write
-            </h1>
-            <p className="text-white/50">
-              {" "}
-              Where Work, Travel, Tech, Business and more
-            </p>
-
-            <div className="buttons flex space-x-2 items-center justify-center mt-6">
-              <Button name="Write" className="text-white/80 " />
-              <Button name="Explore" className="text-white/80 " />
+    <div className="min-h-screen bg-[#222]">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-[#222]"></div>
+        <div className="relative max-w-7xl mx-auto px-4 py-14 sm:px-6 lg:px-8">
+          <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <div className="text-center mb-16">
+              <div className="relative inline-block mb-8">
+                <div className="w-32 h-32 mx-auto rounded-full bg-green-500 p-1 shadow-2xl">
+                  <div className="w-full h-full rounded-full bg-white flex items-center justify-center">
+                    <div className="w-24 h-24 rounded-full bg-[rgba(0,0,0,0.9)] flex items-center justify-center">
+                      <span className="text-white text-2xl font-bold">ARB</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="absolute -bottom-2 -right-0 w-6 h-6 bg-green-500 rounded-full border-4 border-white shadow-lg animate-pulse"></div>
+              </div>
+              <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-t from-white/10 to-white bg-clip-text text-transparent mb-6">
+                AR BlOGS
+              </h1>
+              <p className="text-xl md:text-2xl text-white/50 mb-8 max-w-3xl mx-auto leading-relaxed">
+                Digital storyteller, coffee enthusiast, and code whisperer sharing insights about tech, life, and everything in between.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4 text-sm text-white/40">
+                <div className="flex items-center gap-2">
+                  <MapPin className="w-4 h-4" />
+                  <span>Pakistan, Peshawar</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Calendar className="w-4 h-4" />
+                  <span>Blogging since 2024</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Code className="w-4 h-4" />
+                  <span>Powered by devARcoder</span>
+                </div>
+              </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div className="side2">
-            <img className="" src="/images/arb.png" alt="" />
+      {/* Stats Section */}
+      <section className="py-16 bg-[#222] backdrop-blur-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div 
+                key={stat.label}
+                className={`text-center transform transition-all duration-700 delay-${index * 100} ${
+                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                }`}
+              >
+                <div className="text-3xl md:text-4xl font-bold text-white mb-2">
+                  {stat.number}
+                </div>
+                <div className="text-white/50 text-sm md:text-base">{stat.label}</div>
+              </div>
+            ))}
           </div>
         </div>
-      </div>
-    </>
-  );
-};
+      </section>
 
-export default About;
+      {/* About Content */}
+      <section className="py-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
+              <h2 className="text-3xl font-bold text-white mb-6">Our Story</h2>
+              <div className="prose prose-lg text-white/40 leading-relaxed space-y-4">
+                <p>
+                  What started as a simple journal documenting my journey into tech has evolved into a platform where I share insights, tutorials, and stories that resonate with fellow developers and curious minds.
+                </p>
+                <p>
+                  I believe in the power of sharing knowledge and building communities through authentic storytelling. Whether I'm breaking down complex coding concepts or sharing personal experiences, my goal is to make technology more accessible and human.
+                </p>
+                <p>
+                  When I'm not writing or coding, you'll find me exploring coffee shops around the city, experimenting with photography, or diving into the latest tech trends.
+                </p>
+              </div>
+            </div>
+            
+            <div className={`transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
+              <div className="bg-gradient-to-b from-black/20 to-[#222] rounded-2xl p-8">
+                <h3 className="text-2xl font-bold text-white mb-6">What We Do</h3>
+                <div className="grid grid-cols-2 gap-4">
+                  {skills.map((skill) => (
+                    <div
+                      key={skill.name}
+                      className={`${skill.bg} rounded-xl p-4 cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-md  ${
+                        hoveredSkill === skill.name ? 'ring-2 ring-offset-2 ring-gray-800' : ''
+                      }`}
+                      onMouseEnter={() => setHoveredSkill(skill.name)}
+                      onMouseLeave={() => setHoveredSkill(null)}
+                    >
+                      <skill.icon className={`w-8 h-8 ${skill.color} mb-2`} />
+                      <div className="font-semibold text-white text-sm">{skill.name}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Mission Section */}
+      <section className="py-20 bg-gradient-to-t from-black/50 to-[#222]">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className={`transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <Heart className="w-12 h-12 text-red-500 mx-auto mb-6" />
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              My Mission
+            </h2>
+            <p className="text-xl text-white/40 leading-relaxed max-w-3xl mx-auto">
+              To bridge the gap between complex technology and everyday understanding, creating content that educates, inspires, and empowers others to embrace the digital world with confidence.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-20 bg-black/30">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className={`transition-all duration-1000 delay-900 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <h2 className="text-4xl font-bold text-white mb-3">Meet ARB Creator</h2>
+            <h2 className="text-3xl font-bold text-white mb-6">dev<span className='text-green-500'>AR</span>coder</h2>
+            <p className="text-lg text-white/40 mb-12 max-w-2xl mx-auto">
+              I’m Abdur Razzaq, a Frontend Developer skilled in React.js, Tailwind CSS, and JavaScript, building modern, responsive, and interactive web applications.
+            </p>
+            
+            <div className="flex justify-center space-x-9 mb-12">
+              
+              <a 
+                href="https://devarcoder.vercel.app/" target='_blank'
+                className="group animate-bounce inset-shadow-sm inset-shadow-green-500 
+  shadow-[inset_0_-12px_9px_rgba(0,0,0,0.6)] hover:shadow-[inset_0_-12px_9px_rgba(0,0,0,0.8)] p-4 rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300"
+              >
+                <Link className="w-6 h-6 text-white group-hover:text-green-600 transition-colors duration-300" />
+              </a>
+              <a 
+                href="https://github.com/devARcoder" target='_blank'
+                className="group animate-bounce inset-shadow-sm inset-shadow-green-500 
+  shadow-[inset_0_-12px_9px_rgba(0,0,0,0.6)] hover:shadow-[inset_0_-12px_9px_rgba(0,0,0,0.8)] p-4 rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300"
+              >
+                <Github className="w-6 h-6 text-white group-hover:text-green-600 transition-colors duration-300" />
+              </a>
+              <a 
+                href="https://www.linkedin.com/in/abdur-razzaq-8b569a335/" target='_blank' 
+                className="group animate-bounce inset-shadow-sm inset-shadow-green-500 
+  shadow-[inset_0_-12px_9px_rgba(0,0,0,0.6)] hover:shadow-[inset_0_-12px_9px_rgba(0,0,0,0.8)] p-4 rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300"
+              >
+                <Linkedin className="w-6 h-6 text-white group-hover:text-green-600 transition-colors duration-300" />
+              </a>
+            </div>
+            
+            <div className="border-none text-white cursor-pointer focus:outline-none bg-[#222] rounded-full px-7 py-6 inset-shadow-sm inset-shadow-white 
+  shadow-[inset_0_-12px_9px_rgba(0,0,0,0.6)] hover:shadow-[inset_0_-12px_9px_rgba(0,0,0,0.8)] transform transition-transform duration-800 ease-in-out inline-block">
+              <div className="flex items-center gap-3 text-white">
+                <Mail className="w-5 h-5" />
+                <span className="text-lg">devarcoder789@gmail.com</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
+export default About
