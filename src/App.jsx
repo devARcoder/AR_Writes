@@ -18,6 +18,7 @@ import Startup from './pages/Startup'
 import News from './pages/News'
 import Finance from './pages/Finance'
 import About from './pages/About'
+import ContactPage from './pages/ContactPage'
 
 const App = () => {
   
@@ -39,6 +40,7 @@ const App = () => {
         <Route path="/startup" element={<Startup />} />
         <Route path="/collaborate" element={<Collaboration/>} />
         <Route path="/about" element={<About/>} />
+        <Route path="/contact" element={<ContactPage/>} />
         <Route path="/accounts" element={<Accounts />} />
         
 
