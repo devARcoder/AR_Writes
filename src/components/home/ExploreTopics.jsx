@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom';
 const ExploreTopics = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [showSuggestions, setShowSuggestions] = useState(false);
+  
 
   // Create a flat list of searchable keywords (titles + author names)
   const keywords = [
