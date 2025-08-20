@@ -131,35 +131,35 @@ const ContactPage = () => {
       </section>
 
       {/* Contact Form Section */}
-      <section className="py-20 bg-white/50 backdrop-blur-sm">
+      <section className="py-20 bg-[#222] backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-3 gap-16">
             {/* Contact Form */}
             <div className="lg:col-span-2">
-              <div className={`bg-white rounded-3xl p-8 shadow-xl transition-all duration-1000 delay-600 ${
+              <div className={`bg-black/30 rounded-3xl p-8 shadow-xl transition-all duration-1000 delay-600 ${
                 isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'
               }`}>
-                <h2 className="text-3xl font-bold text-gray-900 mb-2">Send us a message</h2>
-                <p className="text-gray-600 mb-8">We'll get back to you as soon as possible.</p>
+                <h2 className="text-3xl font-bold text-white mb-2">Send us a message</h2>
+                <p className="text-white/70 mb-8">We'll get back to you as soon as possible.</p>
 
                 {formStatus === 'success' && (
                   <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-xl flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-green-600" />
-                    <span className="text-green-800">Message sent successfully! We'll get back to you soon.</span>
+                    <span className="text-white/80">Message sent successfully! We'll get back to you soon.</span>
                   </div>
                 )}
 
                 <div className="space-y-6">
                   {/* Contact Reason */}
                   <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-3">What can we help you with?</label>
+                    <label className="block text-sm font-semibold text-white mb-3">What can we help you with?</label>
                     <div className="grid grid-cols-2 gap-3">
                       {contactReasons.map((reason) => (
                         <label
                           key={reason.value}
                           className={`relative flex items-center gap-3 p-4 border-2 rounded-xl cursor-pointer transition-all duration-300 ${
                             formData.type === reason.value
-                              ? 'border-indigo-500 bg-indigo-50'
+                              ? 'border-green-500 bg-green-50'
                               : 'border-gray-200 hover:border-gray-300 bg-white'
                           }`}
                         >
