@@ -11,7 +11,7 @@ const ContactPage = () => {
     type: 'general'
   });
   const [formStatus, setFormStatus] = useState('');
-  const [hoveredCard, setHoveredCard] = useState(null);
+  
 
   useEffect(() => {
     setIsVisible(true);
@@ -101,16 +101,12 @@ const ContactPage = () => {
             {contactMethods.map((method, index) => (
               <div
                 key={method.title}
-                className={`group relative bg-black/30 rounded-2xl p-8 shadow-lg hover:shadow-2xl transform hover:scale-100 transition-all duration-500 cursor-pointer ${
-                  hoveredCard === index ? 'ring-1 ring-offset-4 ring-black' : ''
-                } delay-${index * 200}`}
+                className={`group relative bg-black/30 rounded-2xl p-8 shadow-lg hover:shadow-2xl transform hover:scale-100 transition-all duration-500 cursor-pointer delay-${index * 200}`}
                 style={{
                   opacity: isVisible ? 1 : 0,
                   transform: `translateY(${isVisible ? 0 : 40}px)`,
                   transitionDelay: `${index * 200}ms`
                 }}
-                onMouseEnter={() => setHoveredCard(index)}
-                onMouseLeave={() => setHoveredCard(null)}
               >
                 <div className={`absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-5 rounded-2xl transition-opacity duration-300`}></div>
                 <div className={`inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r ${method.bgGradient} rounded-lg mb-6 shadow-lg`}>
@@ -315,7 +311,7 @@ const ContactPage = () => {
               </div>
 
               {/* Quick Response */}
-              <div className={`bg-black/30 border border-white/40 rounded-2xl p-6 transition-all duration-1000 delay-1200 ${
+              <div className={`lg:sticky lg:top-10 bg-black/30 border border-white/40 rounded-2xl p-6 transition-all duration-1000 delay-1200 ${
                 isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
               }`}>
                 <div className="flex items-center gap-3 mb-3">
