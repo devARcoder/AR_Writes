@@ -1,10 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { blogData } from "../../data/blogDataStore";
 import { UserPlus, Clock } from "lucide-react";
 import toast from "react-hot-toast";
+import UsersListSkeleton from "../shared/common/loadings/UsersListSkeleton"; // Import the skeleton
 
 const UsersList = () => {
   const [connections, setConnections] = useState({});
+  const [isLoading, setIsLoading] = useState(true); // Add loading state
+
+  // Simulate loading
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1500);
+    
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleConnectClick = (userId, userName) => {
     if (connections[userId]) return;
@@ -18,6 +29,11 @@ const UsersList = () => {
       duration: 4000,
     });
   };
+
+  // Show skeleton while loading
+  if (isLoading) {
+    return <UsersListSkeleton />;
+  }
 
   return (
     <>
